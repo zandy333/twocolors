@@ -1,0 +1,51 @@
+*,
+*::before,
+*::after { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; /* ??? Check this >>> */
+    outline: 0; /* ??? Check this >>> */
+}
+
+#container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  position: relative;
+  background-color: blue;
+  margin: auto;
+}
+
+#menubtn {
+  width: 70px;
+  height: 50px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+#btn {
+  padding: 10px;
+}
+
+#content {
+  background-color: white;
+  margin: auto;
+}
+
+#board {
+  background-color: red;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+table {
+      border-collapse: collapse;
+      border-spacing: 0;
+}
+
+td, th {
+      padding: 0;
+}
+
