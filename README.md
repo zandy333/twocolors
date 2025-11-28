@@ -1,1 +1,2 @@
-# TwoColors is a simple but addicting game to exercise your brain.
+# TwoColors
+TwoColors is a simple but an addicting game to exercise your brain.
