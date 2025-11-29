@@ -29,7 +29,7 @@
 }
 
 #content {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
 }
 
 #board {
@@ -46,5 +46,10 @@ table {
 
 td, th {
       padding: 0;
+      background-color: transparent;
+}
+
+tbody, tr {
+      background-color: transparent;
 }
 

@@ -4,6 +4,7 @@ window.onload=function() {
   let container = document.getElementById("container");
   let menubtn = document.getElementById("menubtn");
   let content = document.getElementById("content");
+  let board = document.getElementById("board");
   let isPortrait = window.matchMedia("(orientation: portrait)").matches;
   let isLandscape = window.matchMedia("(orientation: landscape)").matches;
   let w = window.innerWidth;
@@ -39,6 +40,12 @@ window.onload=function() {
     content.style.height = "80vw";
     content.style.margin = "auto";
 
+    board.style.width = "80vw";
+    board.style.height = "80vw";
+    board.style.backgroundImage = "url('imgs/drawing2.png')";
+    board.style.backgroundSize = "cover";
+    board.style.backgroundRepeat = "no-repeat";
+    board.style.backgroundPosition = "center";
   }
 
   function displayLandscape() { 
@@ -49,6 +56,12 @@ window.onload=function() {
     content.style.height = "80vh";
     content.style.margin = "auto";
 
+    board.style.width = "80vh";
+    board.style.height = "80vh";
+    board.style.backgroundImage = "url('imgs/drawing2.png')";
+    board.style.backgroundSize = "cover";
+    board.style.backgroundRepeat = "no-repeat";
+    board.style.backgroundPosition = "center";
   }
 
   function updateCellSizePortrait() {
@@ -130,82 +143,82 @@ window.onload=function() {
 
   function setCellBorders() {
     c11.style.backgroundImage = "url('imgs/c11.png')";
-    c11.style.backgroundSize = "100% 100%";
+    c11.style.backgroundSize = "cover";
     c11.style.backgroundRepeat = "no-repeat";
     c11.style.backgroundPosition = "center";
 
     c12.style.backgroundImage = "url('imgs/c12.png')";
-    c12.style.backgroundSize = "100% 100%";
+    c12.style.backgroundSize = "cover";
     c12.style.backgroundRepeat = "no-repeat";
     c12.style.backgroundPosition = "center";
 
     c13.style.backgroundImage = "url('imgs/c13.png')";
-    c13.style.backgroundSize = "100% 100%";
+    c13.style.backgroundSize = "cover";
     c13.style.backgroundRepeat = "no-repeat";
     c13.style.backgroundPosition = "center";
 
     c14.style.backgroundImage = "url('imgs/c14.png')";
-    c14.style.backgroundSize = "100% 100%";
+    c14.style.backgroundSize = "cover";
     c14.style.backgroundRepeat = "no-repeat";
     c14.style.backgroundPosition = "center";
 
     c21.style.backgroundImage = "url('imgs/c21.png')";
-    c21.style.backgroundSize = "100% 100%";
+    c21.style.backgroundSize = "cover";
     c21.style.backgroundRepeat = "no-repeat";
     c21.style.backgroundPosition = "center";
 
     c22.style.backgroundImage = "url('imgs/c22.png')";
-    c22.style.backgroundSize = "100% 100%";
+    c22.style.backgroundSize = "cover";
     c22.style.backgroundRepeat = "no-repeat";
     c22.style.backgroundPosition = "center";
 
     c23.style.backgroundImage = "url('imgs/c23.png')";
-    c23.style.backgroundSize = "100% 100%";
+    c23.style.backgroundSize = "cover";
     c23.style.backgroundRepeat = "no-repeat";
     c23.style.backgroundPosition = "center";
 
     c24.style.backgroundImage = "url('imgs/c24.png')";
-    c24.style.backgroundSize = "100% 100%";
+    c24.style.backgroundSize = "cover";
     c24.style.backgroundRepeat = "no-repeat";
     c24.style.backgroundPosition = "center";
 
     c31.style.backgroundImage = "url('imgs/c31.png')";
-    c31.style.backgroundSize = "100% 100%";
+    c31.style.backgroundSize = "cover";
     c31.style.backgroundRepeat = "no-repeat";
     c31.style.backgroundPosition = "center";
 
     c32.style.backgroundImage = "url('imgs/c32.png')";
-    c32.style.backgroundSize = "100% 100%";
+    c32.style.backgroundSize = "cover";
     c32.style.backgroundRepeat = "no-repeat";
     c32.style.backgroundPosition = "center";
 
     c33.style.backgroundImage = "url('imgs/c33.png')";
-    c33.style.backgroundSize = "100% 100%";
+    c33.style.backgroundSize = "cover";
     c33.style.backgroundRepeat = "no-repeat";
     c33.style.backgroundPosition = "center";
 
     c34.style.backgroundImage = "url('imgs/c34.png')";
-    c34.style.backgroundSize = "100% 100%";
+    c34.style.backgroundSize = "cover";
     c34.style.backgroundRepeat = "no-repeat";
     c34.style.backgroundPosition = "center";
 
     c41.style.backgroundImage = "url('imgs/c41.png')";
-    c41.style.backgroundSize = "100% 100%";
+    c41.style.backgroundSize = "cover";
     c41.style.backgroundRepeat = "no-repeat";
     c34.style.backgroundPosition = "center";
 
     c42.style.backgroundImage = "url('imgs/c42.png')";
-    c42.style.backgroundSize = "100% 100%";
+    c42.style.backgroundSize = "cover";
     c42.style.backgroundRepeat = "no-repeat";
     c42.style.backgroundPosition = "center";
 
     c43.style.backgroundImage = "url('imgs/c43.png')";
-    c43.style.backgroundSize = "100% 100%";
+    c43.style.backgroundSize = "cover";
     c43.style.backgroundRepeat = "no-repeat";
     c43.style.backgroundPosition = "center";
 
     c44.style.backgroundImage = "url('imgs/c44.png')";
-    c44.style.backgroundSize = "100% 100%";
+    c44.style.backgroundSize = "cover";
     c44.style.backgroundRepeat = "no-repeat";
     c44.style.backgroundPosition = "center";
   }
@@ -235,87 +248,106 @@ window.onload=function() {
   }
 
   c11.style.backgroundColor = "#aaaaaa";
-  c12.style.backgroundColor = "#aaaaaa";
+  c12.style.backgroundColor = "#cccccc";
   c13.style.backgroundColor = "#aaaaaa";
-  c14.style.backgroundColor = "#aaaaaa";
-  c21.style.backgroundColor = "#aaaaaa";
+  c14.style.backgroundColor = "#cccccc";
+  c21.style.backgroundColor = "#cccccc";
   c22.style.backgroundColor = "#aaaaaa";
-  c23.style.backgroundColor = "#aaaaaa";
+  c23.style.backgroundColor = "#cccccc";
   c24.style.backgroundColor = "#aaaaaa";
   c31.style.backgroundColor = "#aaaaaa";
-  c32.style.backgroundColor = "#aaaaaa";
+  c32.style.backgroundColor = "#cccccc";
   c33.style.backgroundColor = "#aaaaaa";
-  c34.style.backgroundColor = "#aaaaaa";
-  c41.style.backgroundColor = "#aaaaaa";
+  c34.style.backgroundColor = "#cccccc";
+  c41.style.backgroundColor = "#cccccc";
   c42.style.backgroundColor = "#aaaaaa";
-  c43.style.backgroundColor = "#aaaaaa";
-  c44.style.backgroundColor = "#aaaaaa";
+  c43.style.backgroundColor = "#cccccc";
+  c44.style.backgroundColor = "#aaaaaa";/*
+
+  c11.style.backgroundColor = "transparent";
+  c12.style.backgroundColor = "transparent";
+  c13.style.backgroundColor = "transparent";
+  c14.style.backgroundColor = "transparent";
+  c21.style.backgroundColor = "transparent";
+  c22.style.backgroundColor = "transparent";
+  c23.style.backgroundColor = "transparent";
+  c24.style.backgroundColor = "transparent";
+  c31.style.backgroundColor = "transparent";
+  c32.style.backgroundColor = "transparent";
+  c33.style.backgroundColor = "transparent";
+  c34.style.backgroundColor = "transparent";
+  c41.style.backgroundColor = "transparent";
+  c42.style.backgroundColor = "transparent";
+  c43.style.backgroundColor = "transparent";
+  c44.style.backgroundColor = "transparent";*/
 
   if ((w <= h) /*|| (isPortrait)*/) {
     displayPortrait();
-    updateCellSizePortrait();
-    setCellBorders();
-    if (whitedot) {
+    //updateCellSizePortrait();
+    //setCellBorders();
+    /*if (whitedot) {
       whitedot.remove();
     } 
-    setWhiteDotPortrait();
+    setWhiteDotPortrait();*/
     
   } else if ((w > h) /*|| (isLandscape)*/) {
     displayLandscape();
-    updateCellSizeLandscape();
-    setCellBorders();
-    if (whitedot) {
+    //updateCellSizeLandscape();
+    //setCellBorders();
+    /*if (whitedot) {
       whitedot.remove();
     }
-    setWhiteDotLandscape();
+    setWhiteDotLandscape();*/
   };
 
   // Listen for orientation changes
-  window.matchMedia("(orientation: portrait)").addEventListener("change", (e) => {
-  setTimeout( function() {  
-    if (e.matches) {
-      displayPortrait();
-      updateCellSizePortrait();
-      setCellBorders();
-      if (whitedot) {
-      whitedot.remove();
-      }
-      setWhiteDotPortrait();
+  /*window.matchMedia("(orientation: portrait)").addEventListener("change", (e) => {
+    
+    setTimeout( function() {  
+      if (e.matches) {
+        displayPortrait().then(function() {
+        updateCellSizePortrait();
+        }).then(function() {
+        setCellBorders();
+        });
+        /*if (whitedot) {
+        whitedot.remove();
+        }
+        setWhiteDotPortrait();*/
 
-    } else {
-      displayLandscape();
-      updateCellSizeLandscape();
-      setCellBorders();
-      if (whitedot) {
-      whitedot.remove();
+    /*  } else {
+        displayLandscape().then(function() {
+        updateCellSizeLandscape();
+        }).then(function() {
+        setCellBorders();
+        });
       }
-      setWhiteDotLandscape();
-    }
-  }, 2000);
+    }, 2000);
   });
 
   // Listen for orientation changes
   window.matchMedia("(orientation: landscape)").addEventListener("change", (e) => {
-   setTimeout( function() {    
+    
+    setTimeout( function() {    
     if (e.matches) {
-      displayLandscape();
+      displayLandscape().then(function() {
       updateCellSizeLandscape();
+      }).then(function() {
       setCellBorders();
-      if (whitedot) {
+      });
+      /*if (whitedot) {
       whitedot.remove();
       }
-      setWhiteDotLandscape();
-    } else {
-      displayPortrait();
-      updateCellSizePortrait();
-      setCellBorders();
-      if (whitedot) {
-      whitedot.remove();
-      }
-      setWhiteDotPortrait();
+      setWhiteDotLandscape();*/
+   /* }  else {
+        displayPortrait().then(function() {
+        updateCellSizePortrait();
+        }).then(function() {
+        setCellBorders();
+        });
     }
-  }, 2000);
-  });
+    }, 2000);
+  });*/
 
   window.onresize = function() { 
     w = window.innerWidth;
@@ -323,28 +355,36 @@ window.onload=function() {
     setTimeout( function() {
     if ((w <= h) /*|| (isPortrait)*/) {
     
-    displayPortrait();
-    updateCellSizePortrait();
-    
-    setCellBorders();
-    if (whitedot) {
+    displayPortrait();/*.then(function() {
+    //updateCellSizePortrait();
+    //}).then(function() {
+    //setCellBorders();
+    });
+    /*if (whitedot) {
       whitedot.remove();
     }
-    setWhiteDotPortrait();
+    setWhiteDotPortrait();*/
   
         
   } else if ((w > h) /*|| (isLandscape)*/) {
     
-    displayLandscape();
-    updateCellSizeLandscape();
-    
-    setCellBorders();
-    if (whitedot) {
+    displayLandscape();/*.then(function() {
+    //updateCellSizeLandscape();
+    //}).then(function() {
+    //setCellBorders();
+    });
+    /*if (whitedot) {
       whitedot.remove();
     }
-    setWhiteDotLandscape();
+    setWhiteDotLandscape();*/
      
   }
   }, 2000);
   };
 };
+/*
+function1(someVariable).then(function() {
+    function2(someOtherVariable);
+}).then(function() {
+    function3();
+});*/
