@@ -416,6 +416,6 @@ window.addEventListener("resize", () => {
     //setWhiteDotLandscape();
      
   }
-  }, 2000); // Adjust the debounce delay (in milliseconds) as needed
+  }, 200); // Adjust the debounce delay (in milliseconds) as needed
 });
 }
