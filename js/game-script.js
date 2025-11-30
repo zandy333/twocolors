@@ -29,9 +29,7 @@ window.onload=function() {
   let c43 = document.getElementById("c43");
   let c44 = document.getElementById("c44");
   let whitedot = "";
-  let pause_or_play = document.getElementById("pause-or-play");
-  let music_on_off = document.getElementById("music-on-off");
-
+  
   function displayPortrait() {
     /*w = window.innerWidth;
     h = window.innerHeight;*/
@@ -40,12 +38,12 @@ window.onload=function() {
     content.style.height = "80vw";
     content.style.margin = "auto";
 
-    board.style.width = "80vw";
+    /*board.style.width = "80vw";
     board.style.height = "80vw";
-    board.style.backgroundImage = "url('imgs/drawing2.png')";
+    /*board.style.backgroundImage = "url('imgs/drawing2.png')";
     board.style.backgroundSize = "cover";
     board.style.backgroundRepeat = "no-repeat";
-    board.style.backgroundPosition = "center";
+    board.style.backgroundPosition = "center";*/
   }
 
   function displayLandscape() { 
@@ -56,12 +54,12 @@ window.onload=function() {
     content.style.height = "80vh";
     content.style.margin = "auto";
 
-    board.style.width = "80vh";
+    /*board.style.width = "80vh";
     board.style.height = "80vh";
-    board.style.backgroundImage = "url('imgs/drawing2.png')";
+    /*board.style.backgroundImage = "url('imgs/drawing2.png')";
     board.style.backgroundSize = "cover";
     board.style.backgroundRepeat = "no-repeat";
-    board.style.backgroundPosition = "center";
+    board.style.backgroundPosition = "center";*/
   }
 
   function updateCellSizePortrait() {
@@ -133,7 +131,7 @@ window.onload=function() {
 
     c41.style.width = "20vh";
     c41.style.height = "20vh";
-    c42.style.width = "20h";
+    c42.style.width = "20vh";
     c42.style.height = "20vh";
     c43.style.width = "20vh";
     c43.style.height = "20vh";
@@ -205,7 +203,7 @@ window.onload=function() {
     c41.style.backgroundImage = "url('imgs/c41.png')";
     c41.style.backgroundSize = "cover";
     c41.style.backgroundRepeat = "no-repeat";
-    c34.style.backgroundPosition = "center";
+    c41.style.backgroundPosition = "center";
 
     c42.style.backgroundImage = "url('imgs/c42.png')";
     c42.style.backgroundSize = "cover";
@@ -225,24 +223,26 @@ window.onload=function() {
 
   function setWhiteDotPortrait() {
     whitedot = document.createElement("img");
-    whitedot.src = "imgs/whitedot.png";
+    //whitedot.src = "imgs/whitedot.png";
+    whitedot.src = "imgs/tickmark.png";
     whitedot.style.width = "8vw";
     whitedot.style.height = "8vw";
 
-    c11.style.textAlign = "right";
-    c11.style.verticalAlign = "top";
+    whitedot.style.float = "right";
+    whitedot.style.top = "0";
     c11.appendChild(whitedot);
     
   }
 
   function setWhiteDotLandscape() {
     whitedot = document.createElement("img");
-    whitedot.src = "imgs/whitedot.png";
+    //whitedot.src = "imgs/whitedot.png";
+    whitedot.src = "imgs/tickmark.png";
     whitedot.style.width = "8vh";
     whitedot.style.height = "8vh";
 
-    c11.style.textAlign = "right";
-    c11.style.verticalAlign = "top";
+    whitedot.style.float = "right";
+    whitedot.style.top = "0";
     c11.appendChild(whitedot);
     
   }
@@ -283,21 +283,21 @@ window.onload=function() {
 
   if ((w <= h) /*|| (isPortrait)*/) {
     displayPortrait();
-    //updateCellSizePortrait();
-    //setCellBorders();
-    /*if (whitedot) {
+    updateCellSizePortrait();
+    setCellBorders();
+    if (whitedot) {
       whitedot.remove();
     } 
-    setWhiteDotPortrait();*/
+    //setWhiteDotPortrait();
     
   } else if ((w > h) /*|| (isLandscape)*/) {
     displayLandscape();
-    //updateCellSizeLandscape();
-    //setCellBorders();
-    /*if (whitedot) {
+    updateCellSizeLandscape();
+    setCellBorders();
+    if (whitedot) {
       whitedot.remove();
     }
-    setWhiteDotLandscape();*/
+    //setWhiteDotLandscape();
   };
 
   // Listen for orientation changes
@@ -348,43 +348,74 @@ window.onload=function() {
     }
     }, 2000);
   });*/
-
+/*
   window.onresize = function() { 
-    w = window.innerWidth;
-    h = window.innerHeight;
+    //w = window.innerWidth;
+    //h = window.innerHeight;
     setTimeout( function() {
-    if ((w <= h) /*|| (isPortrait)*/) {
-    
-    displayPortrait();/*.then(function() {
+    if ((w <= h) /*|| (isPortrait)*//*) {
+    /*
+    displayPortrait();/*.then(function() {*/
     //updateCellSizePortrait();
     //}).then(function() {
     //setCellBorders();
-    });
+    //});*/
     /*if (whitedot) {
       whitedot.remove();
     }
-    setWhiteDotPortrait();*/
+    //setWhiteDotPortrait();
   
         
-  } else if ((w > h) /*|| (isLandscape)*/) {
+  } else if ((w > h) /*|| (isLandscape)) {
     
-    displayLandscape();/*.then(function() {
-    //updateCellSizeLandscape();
+    displayLandscape();/*.then(function() {*/
+    /*updateCellSizeLandscape();
     //}).then(function() {
     //setCellBorders();
-    });
+    //});*/
     /*if (whitedot) {
       whitedot.remove();
     }
-    setWhiteDotLandscape();*/
+    //setWhiteDotLandscape();
      
   }
   }, 2000);
-  };
-};
-/*
-function1(someVariable).then(function() {
-    function2(someOtherVariable);
-}).then(function() {
-    function3();
-});*/
+  };*/
+
+let resizeTimer;
+window.addEventListener("resize", () => {
+  clearTimeout(resizeTimer); // Clear any existing timer
+  resizeTimer = setTimeout(() => {
+    // This code will execute only after 200ms of no further resize events
+    console.log("Window resize completed!");
+    // Place your resize-dependent logic here
+    // For example, update layout, recalculate positions, etc.
+    w = window.innerWidth;
+    h = window.innerHeight;
+
+    //alert("w: "+  w + ";  h: " + h);
+    
+    if ((w <= h)) {
+    
+    displayPortrait();
+    updateCellSizePortrait();
+    setCellBorders();
+    /*if (whitedot) {
+      whitedot.remove();
+    }*/
+    //setWhiteDotPortrait(); 
+        
+  } else if ((w > h) /*|| (isLandscape)*/) {
+    
+    displayLandscape();
+    updateCellSizeLandscape();
+    setCellBorders();
+    /*if (whitedot) {
+      whitedot.remove();
+    }*/
+    //setWhiteDotLandscape();
+     
+  }
+  }, 2000); // Adjust the debounce delay (in milliseconds) as needed
+});
+}
