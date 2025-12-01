@@ -311,7 +311,7 @@ let resizeTimer;
 window.addEventListener("resize", () => {
     clearTimeout(resizeTimer); // Clear any existing timer
     resizeTimer = setTimeout(() => {
-      // This code will execute only after 10ms of no further resize events
+      // This code will execute only after 1ms of no further resize events
       console.log("Window resize completed!");
       // Place your resize-dependent logic here
       // For example, update layout, recalculate positions, etc.
@@ -333,6 +333,6 @@ window.addEventListener("resize", () => {
       setTickmarkLandscape();
       
     }
-  }, 10); // Adjust the debounce delay (in milliseconds) as needed
+  }, 1); // Adjust the debounce delay (in milliseconds) as needed
 });
 }
