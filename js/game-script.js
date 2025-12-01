@@ -1,6 +1,5 @@
 window.onload=function() {
 
-  //document.body.style.overflow = "hidden"; 
   let container = document.getElementById("container");
   let menubtn = document.getElementById("menubtn");
   let content = document.getElementById("content");
@@ -31,35 +30,17 @@ window.onload=function() {
   let tickmark = "";
   
   function displayPortrait() {
-    /*w = window.innerWidth;
-    h = window.innerHeight;*/
-
+    
     content.style.width = "80vw";
     content.style.height = "80vw";
     content.style.margin = "auto";
-
-    /*board.style.width = "80vw";
-    board.style.height = "80vw";
-    /*board.style.backgroundImage = "url('imgs/drawing2.png')";
-    board.style.backgroundSize = "cover";
-    board.style.backgroundRepeat = "no-repeat";
-    board.style.backgroundPosition = "center";*/
   }
 
   function displayLandscape() { 
-    /*w = window.innerWidth;
-    h = window.innerHeight;*/
 
     content.style.width = "80vh";
     content.style.height = "80vh";
     content.style.margin = "auto";
-
-    /*board.style.width = "80vh";
-    board.style.height = "80vh";
-    /*board.style.backgroundImage = "url('imgs/drawing2.png')";
-    board.style.backgroundSize = "cover";
-    board.style.backgroundRepeat = "no-repeat";
-    board.style.backgroundPosition = "center";*/
   }
 
   function updateCellSizePortrait() {
@@ -140,6 +121,7 @@ window.onload=function() {
   }
 
   function setCellBorders() {
+
     c11.style.backgroundImage = "url('imgs/c11.png')";
     c11.style.backgroundSize = "cover";
     c11.style.backgroundRepeat = "no-repeat";
@@ -222,6 +204,7 @@ window.onload=function() {
   }
 
   function setTickmarkPortrait() {
+
     if (tickmark) {
       tickmark.remove()
     }
@@ -237,6 +220,7 @@ window.onload=function() {
   }
 
   function setTickmarkLandscape() {
+
     if (tickmark) {
       tickmark.remove()
     }
@@ -285,139 +269,70 @@ window.onload=function() {
   c43.style.backgroundColor = "transparent";
   c44.style.backgroundColor = "transparent";*/
 
-  if ((w <= h) /*|| (isPortrait)*/) {
+  if (w <= h) {
     displayPortrait();
     updateCellSizePortrait();
     setCellBorders();
-    if (tickmark) {
-      whitedot.remove();
-    } 
     setTickmarkPortrait();
     
-  } else if ((w > h) /*|| (isLandscape)*/) {
+  } else if (w > h) {
     displayLandscape();
     updateCellSizeLandscape();
     setCellBorders();
-    if (tickmark) {
-      tickmark.remove();
-    }
     setTickmarkLandscape();
   };
 
-  // Listen for orientation changes
-  /*window.matchMedia("(orientation: portrait)").addEventListener("change", (e) => {
+  // Listen for orientation 
+  /*
+  window.matchMedia("(orientation: portrait)").addEventListener("change", (e) => {
     
-    setTimeout( function() {  
-      if (e.matches) {
-        displayPortrait().then(function() {
-        updateCellSizePortrait();
-        }).then(function() {
-        setCellBorders();
-        });
-        /*if (whitedot) {
-        whitedot.remove();
-        }
-        setWhiteDotPortrait();*/
-
-    /*  } else {
-        displayLandscape().then(function() {
-        updateCellSizeLandscape();
-        }).then(function() {
-        setCellBorders();
-        });
-      }
-    }, 2000);
+    if (e.matches) {
+      displayPortrait();
+      updateCellSizePortrait();
+      setCellBorders();
+      setTickmarkPortrait();
+    } 
   });
 
   // Listen for orientation changes
   window.matchMedia("(orientation: landscape)").addEventListener("change", (e) => {
     
-    setTimeout( function() {    
     if (e.matches) {
-      displayLandscape().then(function() {
+      displayLandscape();
       updateCellSizeLandscape();
-      }).then(function() {
       setCellBorders();
-      });
-      /*if (whitedot) {
-      whitedot.remove();
-      }
-      setWhiteDotLandscape();*/
-   /* }  else {
-        displayPortrait().then(function() {
-        updateCellSizePortrait();
-        }).then(function() {
-        setCellBorders();
-        });
-    }
-    }, 2000);
-  });*/
-/*
-  window.onresize = function() { 
-    //w = window.innerWidth;
-    //h = window.innerHeight;
-    setTimeout( function() {
-    if ((w <= h) /*|| (isPortrait)*//*) {
-    /*
-    displayPortrait();/*.then(function() {*/
-    //updateCellSizePortrait();
-    //}).then(function() {
-    //setCellBorders();
-    //});*/
-    /*if (whitedot) {
-      whitedot.remove();
-    }
-    //setWhiteDotPortrait();
-  
-        
-  } else if ((w > h) /*|| (isLandscape)) {
+      setTickmarkLandscape();
+    } 
     
-    displayLandscape();/*.then(function() {*/
-    /*updateCellSizeLandscape();
-    //}).then(function() {
-    //setCellBorders();
-    //});*/
-    /*if (whitedot) {
-      whitedot.remove();
-    }
-    //setWhiteDotLandscape();
-     
-  }
-  }, 2000);
-  };*/
+  });
+  */
 
 let resizeTimer;
 window.addEventListener("resize", () => {
-  clearTimeout(resizeTimer); // Clear any existing timer
-  resizeTimer = setTimeout(() => {
-    // This code will execute only after 200ms of no further resize events
-    console.log("Window resize completed!");
-    // Place your resize-dependent logic here
-    // For example, update layout, recalculate positions, etc.
-    w = window.innerWidth;
-    h = window.innerHeight;
+    clearTimeout(resizeTimer); // Clear any existing timer
+    resizeTimer = setTimeout(() => {
+      // This code will execute only after 10ms of no further resize events
+      console.log("Window resize completed!");
+      // Place your resize-dependent logic here
+      // For example, update layout, recalculate positions, etc.
+      w = window.innerWidth;
+      h = window.innerHeight;
 
-    if ((w <= h)) {
-    
-    displayPortrait();
-    updateCellSizePortrait();
-    setCellBorders();
-    if (tickmark) {
-      tickmark.remove();
+      if ((w <= h)) {
+      
+      displayPortrait();
+      updateCellSizePortrait();
+      setCellBorders();
+      setTickmarkPortrait(); 
+          
+      } else if (w > h) {
+      
+      displayLandscape();
+      updateCellSizeLandscape();
+      setCellBorders();
+      setTickmarkLandscape();
+      
     }
-    setTickmarkPortrait(); 
-        
-  } else if ((w > h) /*|| (isLandscape)*/) {
-    
-    displayLandscape();
-    updateCellSizeLandscape();
-    setCellBorders();
-    if (tickmark) {
-      tickmark.remove();
-    }
-    setTickmarkLandscape();
-     
-  }
-  }, 200); // Adjust the debounce delay (in milliseconds) as needed
+  }, 10); // Adjust the debounce delay (in milliseconds) as needed
 });
 }

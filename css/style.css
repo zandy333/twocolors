@@ -6,7 +6,7 @@
     border: 0;
     box-sizing: border-box; /* ??? Check this >>> */
     outline: 0; /* ??? Check this >>> */
-    /*font-size: 0; /* ??? Check this >>> */
+    font-size: 0; /* ??? Check this >>> */
 }
 
 #container {
@@ -14,7 +14,7 @@
   height: 100vh;
   display: flex;
   position: relative;
-  background-color: blue;
+  background-color: rgb(139, 197, 30);
 }
 
 #menubtn {
@@ -30,7 +30,7 @@
 }
 
 #btn a {
-   /*font-size: 100%;*/
+   font-size: 14px;
 }
 
 #content {
@@ -42,14 +42,6 @@
   margin: 0;
   padding: 0;
   border: 0;
-}
-
-.rows {
-  display: block;
-}
-
-.tile {
-  display: inline-block;
 }
 
 table {
