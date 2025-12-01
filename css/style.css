@@ -50,8 +50,6 @@
   /*box-sizing: border-box;*/
   text-align: center;
   /**/
-
-  transition: width 1.0s, height 1.0s;
 }
 
 #board {
@@ -59,25 +57,22 @@
   margin: 0;
   padding: 0;
   border: 0;
-  transition: width 1.0s, height 1.0s;
 }
 
 table {
   border-collapse: collapse;
   border-spacing: 0;
-  transition: width 1.0s, height 1.0s;
 }
 
 td/*, th*/ {
   padding: 0;
   background-color: transparent;
-  transition: width 1.0s, height 1.0s;
 }
 
 tbody, tr {
   background-color: transparent;
-  transition: width 1.0s, height 1.0s;
 }
+
 /*
 #c11, #c12, #c13, #c14, #c21, #c22, #c23, #c24, #c31, #c32, #c33, #c34, #c41, #c42, #c43, #c44 {
   transition: width 1.0s ease-in-out, height 1.0s ease-in-out;
