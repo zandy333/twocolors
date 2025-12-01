@@ -6,7 +6,7 @@
     border: 0;
     box-sizing: border-box; /* ??? Check this >>> */
     outline: 0; /* ??? Check this >>> */
-    font-size: 0;
+    /*font-size: 0; /* ??? Check this >>> */
 }
 
 #container {
@@ -17,17 +17,20 @@
   background-color: blue;
 }
 
-#menubtn button a {
+#menubtn {
   width: 70px;
   height: 50px;
   position: absolute;
   top: 10px;
   left: 10px;
-  font-size: 14px;
 }
 
 #btn {
   padding: 10px;
+}
+
+#btn a {
+   /*font-size: 100%;*/
 }
 
 #content {
