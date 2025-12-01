@@ -4,13 +4,8 @@ window.onload=function() {
   let menubtn = document.getElementById("menubtn");
   let content = document.getElementById("content");
   let board = document.getElementById("board");
-  let isPortrait = window.matchMedia("(orientation: portrait)").matches;
-  let isLandscape = window.matchMedia("(orientation: landscape)").matches;
   let w = window.innerWidth;
   let h = window.innerHeight;
-  let cwidth = 0;
-  let cheight = 0;
-  let cellSize = 0;
   let c11 = document.getElementById("c11");
   let c12 = document.getElementById("c12");
   let c13 = document.getElementById("c13");
@@ -33,14 +28,14 @@ window.onload=function() {
     
     content.style.width = "80vw";
     content.style.height = "80vw";
-    content.style.margin = "auto";
+    //content.style.margin = "auto";
   }
 
   function displayLandscape() { 
 
     content.style.width = "80vh";
     content.style.height = "80vh";
-    content.style.margin = "auto";
+    //content.style.margin = "auto";
   }
 
   function updateCellSizePortrait() {
@@ -269,18 +264,41 @@ window.onload=function() {
   c43.style.backgroundColor = "transparent";
   c44.style.backgroundColor = "transparent";*/
 
-  if (w <= h) {
+  // Check for portrait orientation
+  const isPortrait = window.matchMedia("(orientation: portrait)").matches;
+
+  if (isPortrait) {
+      console.log("Device is in portrait mode at initial load.");
+      // Perform actions specific to portrait mode
+      displayPortrait();
+      updateCellSizePortrait();
+      setCellBorders();
+      setTickmarkPortrait();
+
+  } else {
+      console.log("Device is in landscape mode at initial load.");
+      // Perform actions specific to landscape mode
+      displayLandscape();
+      updateCellSizeLandscape();
+      setCellBorders();
+      setTickmarkLandscape();
+  }
+
+
+/*
+  if (w < h) {
     displayPortrait();
     updateCellSizePortrait();
     setCellBorders();
     setTickmarkPortrait();
     
-  } else if (w > h) {
+  } else {
     displayLandscape();
     updateCellSizeLandscape();
     setCellBorders();
     setTickmarkLandscape();
   };
+*/
 
   // Listen for orientation changes
   window.matchMedia("(orientation: portrait)").addEventListener("change", (e) => {
@@ -290,13 +308,7 @@ window.onload=function() {
       updateCellSizePortrait();
       setCellBorders();
       setTickmarkPortrait();
-    } 
-  });
-
-  // Listen for orientation changes
-  window.matchMedia("(orientation: landscape)").addEventListener("change", (e) => {
-    
-    if (e.matches) {
+    } else {
       displayLandscape();
       updateCellSizeLandscape();
       setCellBorders();
@@ -317,14 +329,14 @@ window.addEventListener("resize", () => {
       w = window.innerWidth;
       h = window.innerHeight;
 
-      if ((w <= h)) {
+      if ((w < h)) {
       
       displayPortrait();
       updateCellSizePortrait();
       setCellBorders();
       setTickmarkPortrait(); 
           
-      } else if (w > h) {
+      } else {
       
       displayLandscape();
       updateCellSizeLandscape();

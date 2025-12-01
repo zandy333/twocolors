@@ -1,12 +1,12 @@
 *,
 *::before,
 *::after { 
-    margin: 0; 
-    padding: 0; 
-    border: 0;
-    box-sizing: border-box; /* ??? Check this >>> */
-    outline: 0; /* ??? Check this >>> */
-    font-size: 0; /* ??? Check this >>> */
+  margin: 0; 
+  padding: 0; 
+  border: 0;
+  box-sizing: border-box; /* ??? Check this >>> */
+  outline: 0; /* ??? Check this >>> */
+  font-size: 0; /* ??? Check this >>> */
 }
 
 #container {
@@ -14,6 +14,13 @@
   height: 100vh;
   display: flex;
   position: relative;
+
+  /**/
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  /**/
+
   background-color: rgb(139, 197, 30);
 }
 
@@ -34,7 +41,17 @@
 }
 
 #content {
-  background-color: rgb(255, 255, 255);
+  /*background-color: rgb(255, 255, 255);*/
+
+  /**/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*box-sizing: border-box;*/
+  text-align: center;
+  /**/
+
+  transition: width 1.0s ease-in-out, height 1.0s ease-in-out;
 }
 
 #board {
@@ -42,19 +59,27 @@
   margin: 0;
   padding: 0;
   border: 0;
+  transition: width 1.0s ease-in-out, height 1.0s ease-in-out;
 }
 
 table {
-      border-collapse: collapse;
-      border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  transition: width 1.0s ease-in-out, height 1.0s ease-in-out;
 }
 
-td, th {
-      padding: 0;
-      background-color: transparent;
+td/*, th*/ {
+  padding: 0;
+  background-color: transparent;
+  transition: width 1.0s ease-in-out, height 1.0s ease-in-out;
 }
 
 tbody, tr {
-      background-color: transparent;
+  background-color: transparent;
+  transition: width 1.0s ease-in-out, height 1.0s ease-in-out;
 }
+/*
+#c11, #c12, #c13, #c14, #c21, #c22, #c23, #c24, #c31, #c32, #c33, #c34, #c41, #c42, #c43, #c44 {
+  transition: width 1.0s ease-in-out, height 1.0s ease-in-out;
+} */
 
