@@ -207,7 +207,7 @@ window.onload=function() {
     tickmark.src = "imgs/tickmark.png";
     tickmark.style.width = "5vw";
     tickmark.style.height = "5vw";
-    tickmark.transition = "width 1.0s ease-in-out, height 1.0s ease-in-out";
+    tickmark.transition = "width 1.0s ease-out, height 1.0s ease-out";
 
     c11.style.textAlign = "right";
     c11.style.verticalAlign = "top";
@@ -224,7 +224,7 @@ window.onload=function() {
     tickmark.src = "imgs/tickmark.png";
     tickmark.style.width = "5vh";
     tickmark.style.height = "5vh";
-    tickmark.transition = "width 1.0s ease-in-out, height 1.0s ease-in-out";
+    tickmark.transition = "width 1.0s ease-out, height 1.0s ease-out";
 
     c11.style.textAlign = "right";
     c11.style.verticalAlign = "top";
