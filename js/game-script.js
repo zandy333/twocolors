@@ -28,7 +28,7 @@ window.onload=function() {
   let c42 = document.getElementById("c42");
   let c43 = document.getElementById("c43");
   let c44 = document.getElementById("c44");
-  let whitedot = "";
+  let tickmark = "";
   
   function displayPortrait() {
     /*w = window.innerWidth;
@@ -221,29 +221,33 @@ window.onload=function() {
     c44.style.backgroundPosition = "center";
   }
 
-  function setWhiteDotPortrait() {
-    whitedot = document.createElement("img");
-    //whitedot.src = "imgs/whitedot.png";
-    whitedot.src = "imgs/tickmark.png";
-    whitedot.style.width = "8vw";
-    whitedot.style.height = "8vw";
+  function setTickmarkPortrait() {
+    if (tickmark) {
+      tickmark.remove()
+    }
+    tickmark = document.createElement("img");
+    tickmark.src = "imgs/tickmark.png";
+    tickmark.style.width = "5vw";
+    tickmark.style.height = "5vw";
 
-    whitedot.style.float = "right";
-    whitedot.style.top = "0";
-    c11.appendChild(whitedot);
+    c11.style.textAlign = "right";
+    c11.style.verticalAlign = "top";
+    c11.appendChild(tickmark);
     
   }
 
-  function setWhiteDotLandscape() {
-    whitedot = document.createElement("img");
-    //whitedot.src = "imgs/whitedot.png";
-    whitedot.src = "imgs/tickmark.png";
-    whitedot.style.width = "8vh";
-    whitedot.style.height = "8vh";
+  function setTickmarkLandscape() {
+    if (tickmark) {
+      tickmark.remove()
+    }
+    tickmark = document.createElement("img");
+    tickmark.src = "imgs/tickmark.png";
+    tickmark.style.width = "5vh";
+    tickmark.style.height = "5vh";
 
-    whitedot.style.float = "right";
-    whitedot.style.top = "0";
-    c11.appendChild(whitedot);
+    c11.style.textAlign = "right";
+    c11.style.verticalAlign = "top";
+    c11.appendChild(tickmark);
     
   }
 
@@ -285,19 +289,19 @@ window.onload=function() {
     displayPortrait();
     updateCellSizePortrait();
     setCellBorders();
-    if (whitedot) {
+    if (tickmark) {
       whitedot.remove();
     } 
-    //setWhiteDotPortrait();
+    setTickmarkPortrait();
     
   } else if ((w > h) /*|| (isLandscape)*/) {
     displayLandscape();
     updateCellSizeLandscape();
     setCellBorders();
-    if (whitedot) {
-      whitedot.remove();
+    if (tickmark) {
+      tickmark.remove();
     }
-    //setWhiteDotLandscape();
+    setTickmarkLandscape();
   };
 
   // Listen for orientation changes
@@ -393,27 +397,25 @@ window.addEventListener("resize", () => {
     w = window.innerWidth;
     h = window.innerHeight;
 
-    //alert("w: "+  w + ";  h: " + h);
-    
     if ((w <= h)) {
     
     displayPortrait();
     updateCellSizePortrait();
     setCellBorders();
-    /*if (whitedot) {
-      whitedot.remove();
-    }*/
-    //setWhiteDotPortrait(); 
+    if (tickmark) {
+      tickmark.remove();
+    }
+    setTickmarkPortrait(); 
         
   } else if ((w > h) /*|| (isLandscape)*/) {
     
     displayLandscape();
     updateCellSizeLandscape();
     setCellBorders();
-    /*if (whitedot) {
-      whitedot.remove();
-    }*/
-    //setWhiteDotLandscape();
+    if (tickmark) {
+      tickmark.remove();
+    }
+    setTickmarkLandscape();
      
   }
   }, 200); // Adjust the debounce delay (in milliseconds) as needed
