@@ -282,8 +282,7 @@ window.onload=function() {
     setTickmarkLandscape();
   };
 
-  // Listen for orientation 
-  /*
+  // Listen for orientation changes
   window.matchMedia("(orientation: portrait)").addEventListener("change", (e) => {
     
     if (e.matches) {
@@ -305,13 +304,13 @@ window.onload=function() {
     } 
     
   });
-  */
-
-let resizeTimer;
+  
+// Listen for viewport resize
+/*let resizeTimer;
 window.addEventListener("resize", () => {
     clearTimeout(resizeTimer); // Clear any existing timer
     resizeTimer = setTimeout(() => {
-      // This code will execute only after 1ms of no further resize events
+      // This code will execute only after 200ms of no further resize events
       console.log("Window resize completed!");
       // Place your resize-dependent logic here
       // For example, update layout, recalculate positions, etc.
@@ -333,6 +332,6 @@ window.addEventListener("resize", () => {
       setTickmarkLandscape();
       
     }
-  }, 1); // Adjust the debounce delay (in milliseconds) as needed
-});
+  }, 0); // Adjust the debounce delay (in milliseconds) as needed
+});*/
 }
