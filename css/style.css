@@ -53,7 +53,7 @@
 }
 
 #board {
-  background-color: red;
+  background-color: rgb(255, 224, 45);
   margin: 0;
   padding: 0;
   border: 0;
@@ -67,6 +67,7 @@ table {
 td/*, th*/ {
   padding: 0;
   background-color: transparent;
+  
 }
 
 tbody, tr {
@@ -77,4 +78,9 @@ tbody, tr {
 #c11, #c12, #c13, #c14, #c21, #c22, #c23, #c24, #c31, #c32, #c33, #c34, #c41, #c42, #c43, #c44 {
   transition: width 1.0s ease-in-out, height 1.0s ease-in-out;
 } */
+
+#d11, #d12, #d13, #d14, #d21, #d22, #d23, #d24, #d31, #d32, #d33, #d34, #d41, #d42, #d43, #d44 {
+  text-align: right;
+  vertical-align: top;
+}
 
