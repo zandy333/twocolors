@@ -56,23 +56,22 @@
   background-color: rgb(255, 224, 45);
   margin: 0;
   padding: 0;
-  /*border: 0;*/
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
   border-spacing: 0;
 }
 
-/*table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}*/
-
 td/*, th*/ {
   padding: 0;
-  /*background-color: transparent;*/
+  background-color: transparent;
   
 }
 
 tbody, tr {
-  /*background-color: transparent;*/
+  background-color: transparent;
 }
 
 /*
@@ -83,9 +82,5 @@ tbody, tr {
 #d11, #d12, #d13, #d14, #d21, #d22, #d23, #d24, #d31, #d32, #d33, #d34, #d41, #d42, #d43, #d44 {
   text-align: right;
   vertical-align: top;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  background-color: transparent;
 }
 

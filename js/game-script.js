@@ -6,6 +6,9 @@ window.onload=function() {
   let board = document.getElementById("board");
   let w = window.innerWidth;
   let h = window.innerHeight;
+  let tbl = document.getElementsByTagName("table");
+  let td = document.getElementsByTagName("td");
+  let d = document.getElementsByClassName("d");
   let c11 = document.getElementById("c11");
   let c12 = document.getElementById("c12");
   let c13 = document.getElementById("c13");
@@ -54,18 +57,69 @@ window.onload=function() {
   let tickmark42 = "";
   let tickmark43 = "";
   let tickmark44 = "";
+  let clicks11 = 0;
+  let clicks12 = 0;
+  let clicks13 = 0;
+  let clicks14 = 0;
+  let clicks21 = 0;
+  let clicks22 = 0;
+  let clicks23 = 0;
+  let clicks24 = 0;
+  let clicks31 = 0;
+  let clicks32 = 0;
+  let clicks33 = 0;
+  let clicks34 = 0;
+  let clicks41 = 0;
+  let clicks42 = 0;
+  let clicks43 = 0;
+  let clicks44 = 0;
+  let editable = true;
     
   function displayPortrait() {
-    
-    content.style.width = "80vw";
-    content.style.height = "80vw";
+
+    for (let i = 0; i < tbl.length; i++) {
+      tbl[i].style.border = "0.5vw solid #ffffff";
+      tbl[i].style.width = "85vw";
+      tbl[i].style.height = "85vw";
+    };
+
+    for (let i = 0; i < td.length; i++) {
+      td[i].style.border = "0.5vw solid #ffffff";
+      td[i].style.width = "20vw";
+      td[i].style.height = "20vw";
+    };
+
+    for (let i = 0; i < d.length; i++) {
+      d[i].style.width = "21vw"; // 21vw instead of 20vw is used to avoid unexpected spacing
+      d[i].style.height = "21vw"; // 21vw instead of 20vw is used to avoid unexpected spacing
+    };
+
+    /*content.style.width = "85vw";
+    content.style.height = "85vw";*/
     //content.style.margin = "auto";
   }
 
   function displayLandscape() { 
 
-    content.style.width = "80vh";
-    content.style.height = "80vh";
+    for (let i = 0; i < tbl.length; i++) {
+      tbl[i].style.border = "0.5vh solid #ffffff";
+      tbl[i].style.width = "85vh";
+      tbl[i].style.height = "85vh";
+    };
+
+    for (let i = 0; i < td.length; i++) {
+      td[i].style.border = "0.5vh solid #ffffff";
+      td[i].style.width = "20vh";
+      td[i].style.height = "20vh";
+    };
+
+    for (let i = 0; i < d.length; i++) {
+      d[i].style.width = "21vh"; // 21vw instead of 20vw is used to avoid unexpected spacing
+      d[i].style.height = "21vh"; // 21vw instead of 20vw is used to avoid unexpected spacing
+    };
+
+    /*content.style.width = "85vh";
+    content.style.height = "85vh";*/
     //content.style.margin = "auto";
   }
 
@@ -304,7 +358,7 @@ window.onload=function() {
     c44.style.backgroundRepeat = "no-repeat";
     c44.style.backgroundPosition = "center";
   }*/
-
+/*
   function setCellBorders() {
 
     d11.style.backgroundImage = "url('imgs/c11.png')";
@@ -386,7 +440,7 @@ window.onload=function() {
     d44.style.backgroundSize = "cover";
     d44.style.backgroundRepeat = "no-repeat";
     d44.style.backgroundPosition = "center";
-  }
+  }*/
 
   function setTickmarkPortrait() {
 
@@ -442,7 +496,7 @@ window.onload=function() {
     tickmark44.style.height = "5vh";
   }
 
-  function gameEasy_38() {
+  function gameLogic() {
 
     tickmark11 = document.createElement("img");
     tickmark11.src = "imgs/tickmark.png";
@@ -499,21 +553,55 @@ window.onload=function() {
     */
 
     c11.style.backgroundColor = "#26b0f0ff";
-    c12.style.backgroundColor = "transparent";
+    //c12.style.backgroundColor = "transparent";
     c13.style.backgroundColor = "#f02626ff";
-    c14.style.backgroundColor = "transparent";
-    c21.style.backgroundColor = "transparent";
-    c22.style.backgroundColor = "transparent";
+    //c14.style.backgroundColor = "transparent";
+    //c21.style.backgroundColor = "transparent";
+    //c22.style.backgroundColor = "transparent";
     c23.style.backgroundColor = "#26b0f0ff";
     c24.style.backgroundColor = "#f02626ff";
-    c31.style.backgroundColor = "transparent";
+    //c31.style.backgroundColor = "transparent";
     c32.style.backgroundColor = "#26b0f0ff";
-    c33.style.backgroundColor = "transparent";
+    //c33.style.backgroundColor = "transparent";
     c34.style.backgroundColor = "#f02626ff";
-    c41.style.backgroundColor = "transparent";
+    //c41.style.backgroundColor = "transparent";
     c42.style.backgroundColor = "#f02626ff";
-    c43.style.backgroundColor = "transparent";
+    //c43.style.backgroundColor = "transparent";
     c44.style.backgroundColor = "#26b0f0ff";
+
+    function checkWin() {
+      if ((clicks12 == 1) && 
+        (clicks14 == 0) && 
+        (clicks21 == 1) && 
+        (clicks22 == 0) && 
+        (clicks31 == 0) && 
+        (clicks33 == 1) && 
+        (clicks41 == 1) && 
+        (clicks43 == 0)) {
+          editable = false;
+          alert("You Win!");
+      }
+    }
+
+    d12.addEventListener("click", function(e) {
+      setTimeout(function() {
+       if (editable) {
+          
+          if (clicks12 == 1) {
+              c12.style.backgroundColor = "#f02626ff";
+          } else if (clicks12 == 0) {
+              c12.style.backgroundColor = "#26b0f0ff";
+          } else {
+              null;
+          }
+          clicks12 = clicks12 + 1;
+          if (clicks12 >= 2) {
+            clicks12 = 0;
+          }
+          //checkWin();
+        }
+      }, 200);
+    });
   }
 
   // Check for portrait orientation
@@ -522,19 +610,19 @@ window.onload=function() {
   if (isPortrait) {
       console.log("Device is in portrait mode at initial load.");
       // Perform actions specific to portrait mode
-      gameEasy_38();
+      gameLogic();
       displayPortrait();
-      updateCellSizePortrait();
-      setCellBorders();
+      //updateCellSizePortrait();
+      //setCellBorders();
       setTickmarkPortrait();
 
   } else {
       console.log("Device is in landscape mode at initial load.");
       // Perform actions specific to landscape mode
-      gameEasy_38();
+      gameLogic();
       displayLandscape();
-      updateCellSizeLandscape();
-      setCellBorders();
+      //updateCellSizeLandscape();
+      //setCellBorders();
       setTickmarkLandscape();
   }
 
@@ -558,13 +646,13 @@ window.onload=function() {
     
     if (e.matches) {
       displayPortrait();
-      updateCellSizePortrait();
-      setCellBorders();
+      //updateCellSizePortrait();
+      //setCellBorders();
       setTickmarkPortrait();
     } else {
       displayLandscape();
-      updateCellSizeLandscape();
-      setCellBorders();
+      //updateCellSizeLandscape();
+      //setCellBorders();
       setTickmarkLandscape();
     } 
     
