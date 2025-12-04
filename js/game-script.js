@@ -74,6 +74,38 @@ window.onload=function() {
   let clicks43 = 0;
   let clicks44 = 0;
   let editable = true;
+  let red11 = false;
+  let red12 = false;
+  let red13 = false;
+  let red14 = false;
+  let red21 = false;
+  let red22 = false;
+  let red23 = false;
+  let red24 = false;
+  let red31 = false;
+  let red32 = false;
+  let red33 = false;
+  let red34 = false;
+  let red41 = false;
+  let red42 = false;
+  let red43 = false;
+  let red44 = false;
+  let blue11 = false;
+  let blue12 = false;
+  let blue13 = false;
+  let blue14 = false;
+  let blue21 = false;
+  let blue22 = false;
+  let blue23 = false;
+  let blue24 = false;
+  let blue31 = false;
+  let blue32 = false;
+  let blue33 = false;
+  let blue34 = false;
+  let blue41 = false;
+  let blue42 = false;
+  let blue43 = false;
+  let blue44 = false;
     
   function displayPortrait() {
 
@@ -553,33 +585,35 @@ window.onload=function() {
     */
 
     c11.style.backgroundColor = "#26b0f0ff";
-    //c12.style.backgroundColor = "transparent";
+    c12.style.backgroundColor = "transparent";
     c13.style.backgroundColor = "#f02626ff";
-    //c14.style.backgroundColor = "transparent";
-    //c21.style.backgroundColor = "transparent";
-    //c22.style.backgroundColor = "transparent";
+    c14.style.backgroundColor = "transparent";
+    c21.style.backgroundColor = "transparent";
+    c22.style.backgroundColor = "transparent";
     c23.style.backgroundColor = "#26b0f0ff";
     c24.style.backgroundColor = "#f02626ff";
-    //c31.style.backgroundColor = "transparent";
+    c31.style.backgroundColor = "transparent";
     c32.style.backgroundColor = "#26b0f0ff";
-    //c33.style.backgroundColor = "transparent";
+    c33.style.backgroundColor = "transparent";
     c34.style.backgroundColor = "#f02626ff";
-    //c41.style.backgroundColor = "transparent";
+    c41.style.backgroundColor = "transparent";
     c42.style.backgroundColor = "#f02626ff";
-    //c43.style.backgroundColor = "transparent";
+    c43.style.backgroundColor = "transparent";
     c44.style.backgroundColor = "#26b0f0ff";
 
     function checkWin() {
-      if ((clicks12 == 1) && 
-        (clicks14 == 0) && 
-        (clicks21 == 1) && 
-        (clicks22 == 0) && 
-        (clicks31 == 0) && 
-        (clicks33 == 1) && 
-        (clicks41 == 1) && 
-        (clicks43 == 0)) {
+      if ((red12 == true) && 
+        (blue14 == true) && 
+        (red21 == true) && 
+        (blue22 == true) && 
+        (blue31 == true) && 
+        (red33 == true) && 
+        (red41 == true) && 
+        (blue43 == true)) {
           editable = false;
-          alert("You Win!");
+          setTimeout(function() {
+            alert("You Win!");
+          }, 200);
       }
     }
 
@@ -589,8 +623,12 @@ window.onload=function() {
           
           if (clicks12 == 1) {
               c12.style.backgroundColor = "#f02626ff";
+              red12 = true;
+              blue12 = false;
           } else if (clicks12 == 0) {
               c12.style.backgroundColor = "#26b0f0ff";
+              red12 = false;
+              blue12 = true;
           } else {
               null;
           }
@@ -598,7 +636,175 @@ window.onload=function() {
           if (clicks12 >= 2) {
             clicks12 = 0;
           }
-          //checkWin();
+          checkWin();
+        }
+      }, 200);
+    });
+
+    d14.addEventListener("click", function(e) {
+      setTimeout(function() {
+       if (editable) {
+          
+          if (clicks14 == 1) {
+              c14.style.backgroundColor = "#f02626ff";
+              red14 = true;
+              blue14 = false;
+          } else if (clicks14 == 0) {
+              c14.style.backgroundColor = "#26b0f0ff";
+              red14 = false;
+              blue14 = true;
+          } else {
+              null;
+          }
+          clicks14 = clicks14 + 1;
+          if (clicks14 >= 2) {
+            clicks14 = 0;
+          }
+          checkWin();
+        }
+      }, 200);
+    });
+
+    d21.addEventListener("click", function(e) {
+      setTimeout(function() {
+       if (editable) {
+          
+          if (clicks21 == 1) {
+              c21.style.backgroundColor = "#f02626ff";
+              red21 = true;
+              blue21 = false;
+          } else if (clicks21 == 0) {
+              c21.style.backgroundColor = "#26b0f0ff";
+              red21 = false;
+              blue21 = true;
+          } else {
+              null;
+          }
+          clicks21 = clicks21 + 1;
+          if (clicks21 >= 2) {
+            clicks21 = 0;
+          }
+          checkWin();
+        }
+      }, 200);
+    });
+
+    d22.addEventListener("click", function(e) {
+      setTimeout(function() {
+       if (editable) {
+          
+          if (clicks22 == 1) {
+              c22.style.backgroundColor = "#f02626ff";
+              red22 = true;
+              blue22 = false;
+          } else if (clicks22 == 0) {
+              c22.style.backgroundColor = "#26b0f0ff";
+              red22 = false;
+              blue22 = true;
+          } else {
+              null;
+          }
+          clicks22 = clicks22 + 1;
+          if (clicks22 >= 2) {
+            clicks22 = 0;
+          }
+          checkWin();
+        }
+      }, 200);
+    });
+
+    d31.addEventListener("click", function(e) {
+      setTimeout(function() {
+       if (editable) {
+          
+          if (clicks31 == 1) {
+              c31.style.backgroundColor = "#f02626ff";
+              red31 = true;
+              blue31 = false;
+          } else if (clicks31 == 0) {
+              c31.style.backgroundColor = "#26b0f0ff";
+              red31 = false;
+              blue31 = true;
+          } else {
+              null;
+          }
+          clicks31 = clicks31 + 1;
+          if (clicks31 >= 2) {
+            clicks31 = 0;
+          }
+          checkWin();
+        }
+      }, 200);
+    });
+
+    d33.addEventListener("click", function(e) {
+      setTimeout(function() {
+       if (editable) {
+          
+          if (clicks33 == 1) {
+              c33.style.backgroundColor = "#f02626ff";
+              red33 = true;
+              blue33 = false;
+          } else if (clicks33 == 0) {
+              c33.style.backgroundColor = "#26b0f0ff";
+              red33 = false;
+              blue33 = true;
+          } else {
+              null;
+          }
+          clicks33 = clicks33 + 1;
+          if (clicks33 >= 2) {
+            clicks33 = 0;
+          }
+          checkWin();
+        }
+      }, 200);
+    });
+
+    d41.addEventListener("click", function(e) {
+      setTimeout(function() {
+       if (editable) {
+          
+          if (clicks41 == 1) {
+              c41.style.backgroundColor = "#f02626ff";
+              red41 = true;
+              blue41 = false;
+          } else if (clicks41 == 0) {
+              c41.style.backgroundColor = "#26b0f0ff";
+              red41 = false;
+              blue41 = true;
+          } else {
+              null;
+          }
+          clicks41 = clicks41 + 1;
+          if (clicks41 >= 2) {
+            clicks41 = 0;
+          }
+          checkWin();
+        }
+      }, 200);
+    });
+
+    d43.addEventListener("click", function(e) {
+      setTimeout(function() {
+       if (editable) {
+          
+          if (clicks43 == 1) {
+              c43.style.backgroundColor = "#f02626ff";
+              red43 = true;
+              blue43 = false;
+          } else if (clicks43 == 0) {
+              c43.style.backgroundColor = "#26b0f0ff";
+              red43 = false;
+              blue43 = true;
+          } else {
+              null;
+          }
+          clicks43 = clicks43 + 1;
+          if (clicks43 >= 2) {
+            clicks43 = 0;
+          }
+          checkWin();
         }
       }, 200);
     });
