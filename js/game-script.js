@@ -41,22 +41,22 @@ window.onload=function() {
   let d42 = document.getElementById("d42");
   let d43 = document.getElementById("d43");
   let d44 = document.getElementById("d44");
-  let tickmark11 = "";
-  let tickmark12 = "";
-  let tickmark13 = "";
-  let tickmark14 = "";
-  let tickmark21 = "";
-  let tickmark22 = "";
-  let tickmark23 = "";
-  let tickmark24 = "";
-  let tickmark31 = "";
-  let tickmark32 = "";
-  let tickmark33 = "";
-  let tickmark34 = "";
-  let tickmark41 = "";
-  let tickmark42 = "";
-  let tickmark43 = "";
-  let tickmark44 = "";
+  let padlock11 = "";
+  let padlock12 = "";
+  let padlock13 = "";
+  let padlock14 = "";
+  let padlock21 = "";
+  let padlock22 = "";
+  let padlock23 = "";
+  let padlock24 = "";
+  let padlock31 = "";
+  let padlock32 = "";
+  let padlock33 = "";
+  let padlock34 = "";
+  let padlock41 = "";
+  let padlock42 = "";
+  let padlock43 = "";
+  let padlock44 = "";
   let clicks11 = 0;
   let clicks12 = 0;
   let clicks13 = 0;
@@ -110,9 +110,9 @@ window.onload=function() {
   function displayPortrait() {
 
     for (let i = 0; i < tbl.length; i++) {
-      tbl[i].style.border = "0.5vw solid #ffffff";
-      tbl[i].style.width = "85vw";
-      tbl[i].style.height = "85vw";
+      tbl[i].style.border = "1vw solid #ffffff";
+      tbl[i].style.width = "86vw";
+      tbl[i].style.height = "86vw";
     };
 
     for (let i = 0; i < td.length; i++) {
@@ -130,9 +130,9 @@ window.onload=function() {
   function displayLandscape() { 
 
     for (let i = 0; i < tbl.length; i++) {
-      tbl[i].style.border = "0.5vh solid #ffffff";
-      tbl[i].style.width = "85vh";
-      tbl[i].style.height = "85vh";
+      tbl[i].style.border = "1vh solid #ffffff";
+      tbl[i].style.width = "86vh";
+      tbl[i].style.height = "86vh";
     };
 
     for (let i = 0; i < td.length; i++) {
@@ -147,94 +147,94 @@ window.onload=function() {
     };
   }
 
-  function setTickmarkPortrait() {
+  function setPadlockPortrait() {
 
-    tickmark11.style.width = "5vw";
-    tickmark11.style.height = "5vw";
+    padlock11.style.width = "5vw";
+    padlock11.style.height = "5vw";
 
-    tickmark13.style.width = "5vw";
-    tickmark13.style.height = "5vw";
+    padlock13.style.width = "5vw";
+    padlock13.style.height = "5vw";
 
-    tickmark23.style.width = "5vw";
-    tickmark23.style.height = "5vw";
+    padlock23.style.width = "5vw";
+    padlock23.style.height = "5vw";
 
-    tickmark24.style.width = "5vw";
-    tickmark24.style.height = "5vw";
+    padlock24.style.width = "5vw";
+    padlock24.style.height = "5vw";
 
-    tickmark32.style.width = "5vw";
-    tickmark32.style.height = "5vw";
+    padlock32.style.width = "5vw";
+    padlock32.style.height = "5vw";
 
-    tickmark34.style.width = "5vw";
-    tickmark34.style.height = "5vw";
+    padlock34.style.width = "5vw";
+    padlock34.style.height = "5vw";
 
-    tickmark42.style.width = "5vw";
-    tickmark42.style.height = "5vw";
+    padlock42.style.width = "5vw";
+    padlock42.style.height = "5vw";
 
-    tickmark44.style.width = "5vw";
-    tickmark44.style.height = "5vw";
+    padlock44.style.width = "5vw";
+    padlock44.style.height = "5vw";
   }
 
-  function setTickmarkLandscape() {
+  function setPadlockLandscape() {
 
-    tickmark11.style.width = "5vh";
-    tickmark11.style.height = "5vh";
+    padlock11.style.width = "5vh";
+    padlock11.style.height = "5vh";
 
-    tickmark13.style.width = "5vh";
-    tickmark13.style.height = "5vh";
+    padlock13.style.width = "5vh";
+    padlock13.style.height = "5vh";
 
-    tickmark23.style.width = "5vh";
-    tickmark23.style.height = "5vh";
+    padlock23.style.width = "5vh";
+    padlock23.style.height = "5vh";
 
-    tickmark24.style.width = "5vh";
-    tickmark24.style.height = "5vh";
+    padlock24.style.width = "5vh";
+    padlock24.style.height = "5vh";
 
-    tickmark32.style.width = "5vh";
-    tickmark32.style.height = "5vh";
+    padlock32.style.width = "5vh";
+    padlock32.style.height = "5vh";
 
-    tickmark34.style.width = "5vh";
-    tickmark34.style.height = "5vh";
+    padlock34.style.width = "5vh";
+    padlock34.style.height = "5vh";
 
-    tickmark42.style.width = "5vh";
-    tickmark42.style.height = "5vh";
+    padlock42.style.width = "5vh";
+    padlock42.style.height = "5vh";
 
-    tickmark44.style.width = "5vh";
-    tickmark44.style.height = "5vh";
+    padlock44.style.width = "5vh";
+    padlock44.style.height = "5vh";
   }
 
   function gameLogic() {
 
-    tickmark11 = document.createElement("img");
-    tickmark11.src = "imgs/tickmark.png";
+    padlock11 = document.createElement("img");
+    padlock11.src = "imgs/padlock.png";
 
-    tickmark13 = document.createElement("img");
-    tickmark13.src = "imgs/tickmark.png";
+    padlock13 = document.createElement("img");
+    padlock13.src = "imgs/padlock.png";
 
-    tickmark23 = document.createElement("img");
-    tickmark23.src = "imgs/tickmark.png";
+    padlock23 = document.createElement("img");
+    padlock23.src = "imgs/padlock.png";
  
-    tickmark24 = document.createElement("img");
-    tickmark24.src = "imgs/tickmark.png";
+    padlock24 = document.createElement("img");
+    padlock24.src = "imgs/padlock.png";
 
-    tickmark32 = document.createElement("img");
-    tickmark32.src = "imgs/tickmark.png";
+    padlock32 = document.createElement("img");
+    padlock32.src = "imgs/padlock.png";
 
-    tickmark34 = document.createElement("img");
-    tickmark34.src = "imgs/tickmark.png";
+    padlock34 = document.createElement("img");
+    padlock34.src = "imgs/padlock.png";
    
-    tickmark42 = document.createElement("img");
-    tickmark42.src = "imgs/tickmark.png";
+    padlock42 = document.createElement("img");
+    padlock42.src = "imgs/padlock.png";
 
-    tickmark44 = document.createElement("img");
-    tickmark44.src = "imgs/tickmark.png";
+    padlock44 = document.createElement("img");
+    padlock44.src = "imgs/padlock.png";
     
-    d11.appendChild(tickmark11);
-    d13.appendChild(tickmark13);
-    d23.appendChild(tickmark23);
-    d24.appendChild(tickmark24);
-    d32.appendChild(tickmark32);
-    d34.appendChild(tickmark34);
-    d42.appendChild(tickmark42);
-    d44.appendChild(tickmark44);
+    d11.appendChild(padlock11);
+    d13.appendChild(padlock13);
+    d23.appendChild(padlock23);
+    d24.appendChild(padlock24);
+    d32.appendChild(padlock32);
+    d34.appendChild(padlock34);
+    d42.appendChild(padlock42);
+    d44.appendChild(padlock44);
 
     c11.style.backgroundColor = "#26b0f0ff";
     c12.style.backgroundColor = "transparent";
@@ -470,14 +470,14 @@ window.onload=function() {
       // Perform actions specific to portrait mode
       gameLogic();
       displayPortrait();
-      setTickmarkPortrait();
+      setPadlockPortrait();
 
   } else {
       console.log("Device is in landscape mode at initial load.");
       // Perform actions specific to landscape mode
       gameLogic();
       displayLandscape();
-      setTickmarkLandscape();
+      setPadlockLandscape();
   }
 
 /*
@@ -485,13 +485,13 @@ window.onload=function() {
     displayPortrait();
     updateCellSizePortrait();
     setCellBorders();
-    //setTickmarkPortrait();
+    //setPadlockPortrait();
     
   } else {
     displayLandscape();
     updateCellSizeLandscape();
     setCellBorders();
-    //setTickmarkLandscape();
+    //setPadlockLandscape();
   };
 */
 
@@ -500,10 +500,10 @@ window.onload=function() {
     
     if (e.matches) {
       displayPortrait();
-      setTickmarkPortrait();
+      setPadlockPortrait();
     } else {
       displayLandscape();
-      setTickmarkLandscape();
+      setPadlockLandscape();
     } 
     
   });
@@ -525,14 +525,14 @@ window.addEventListener("resize", () => {
       displayPortrait();
       updateCellSizePortrait();
       setCellBorders();
-      //setTickmarkPortrait(); 
+      //setPadlockPortrait(); 
           
       } else {
       
       displayLandscape();
       updateCellSizeLandscape();
       setCellBorders();
-      //setTickmarkLandscape();
+      //setPadlockLandscape();
       
     }
   }, 0); // Adjust the debounce delay (in milliseconds) as needed
