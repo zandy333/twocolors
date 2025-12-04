@@ -125,10 +125,6 @@ window.onload=function() {
       d[i].style.width = "21vw"; // 21vw instead of 20vw is used to avoid unexpected spacing
       d[i].style.height = "21vw"; // 21vw instead of 20vw is used to avoid unexpected spacing
     };
-
-    /*content.style.width = "85vw";
-    content.style.height = "85vw";*/
-    //content.style.margin = "auto";
   }
 
   function displayLandscape() { 
@@ -149,330 +145,7 @@ window.onload=function() {
       d[i].style.width = "21vh"; // 21vw instead of 20vw is used to avoid unexpected spacing
       d[i].style.height = "21vh"; // 21vw instead of 20vw is used to avoid unexpected spacing
     };
-
-    /*content.style.width = "85vh";
-    content.style.height = "85vh";*/
-    //content.style.margin = "auto";
   }
-
-  function updateCellSizePortrait() {
-
-    c11.style.width = "20vw";
-    c11.style.height = "20vw";
-    c12.style.width = "20vw";
-    c12.style.height = "20vw";
-    c13.style.width = "20vw";
-    c13.style.height = "20vw";
-    c14.style.width = "20vw";
-    c14.style.height = "20vw";
-
-    c21.style.width = "20vw";
-    c21.style.height = "20vw";
-    c22.style.width = "20vw";
-    c22.style.height = "20vw";
-    c23.style.width = "20vw";
-    c23.style.height = "20vw";
-    c24.style.width = "20vw";
-    c24.style.height = "20vw";
-
-    c31.style.width = "20vw";
-    c31.style.height = "20vw";
-    c32.style.width = "20vw";
-    c32.style.height = "20vw";
-    c33.style.width = "20vw";
-    c33.style.height = "20vw";
-    c34.style.width = "20vw";
-    c34.style.height = "20vw";
-
-    c41.style.width = "20vw";
-    c41.style.height = "20vw";
-    c42.style.width = "20vw";
-    c42.style.height = "20vw";
-    c43.style.width = "20vw";
-    c43.style.height = "20vw";
-    c44.style.width = "20vw";
-    c44.style.height = "20vw";
-
-
-    d11.style.width = "20vw";
-    d11.style.height = "20vw";
-    d12.style.width = "20vw";
-    d12.style.height = "20vw";
-    d13.style.width = "20vw";
-    d13.style.height = "20vw";
-    d14.style.width = "20vw";
-    d14.style.height = "20vw";
-
-    d21.style.width = "20vw";
-    d21.style.height = "20vw";
-    d22.style.width = "20vw";
-    d22.style.height = "20vw";
-    d23.style.width = "20vw";
-    d23.style.height = "20vw";
-    d24.style.width = "20vw";
-    d24.style.height = "20vw";
-
-    d31.style.width = "20vw";
-    d31.style.height = "20vw";
-    d32.style.width = "20vw";
-    d32.style.height = "20vw";
-    d33.style.width = "20vw";
-    d33.style.height = "20vw";
-    d34.style.width = "20vw";
-    d34.style.height = "20vw";
-
-    d41.style.width = "20vw";
-    d41.style.height = "20vw";
-    d42.style.width = "20vw";
-    d42.style.height = "20vw";
-    d43.style.width = "20vw";
-    d43.style.height = "20vw";
-    d44.style.width = "20vw";
-    d44.style.height = "20vw";
-  }
-
-  function updateCellSizeLandscape() {
-
-    c11.style.width = "20vh";
-    c11.style.height = "20vh";
-    c12.style.width = "20vh";
-    c12.style.height = "20vh";
-    c13.style.width = "20vh";
-    c13.style.height = "20vh";
-    c14.style.width = "20vh";
-    c14.style.height = "20vh";
-
-    c21.style.width = "20vh";
-    c21.style.height = "20vh";
-    c22.style.width = "20vh";
-    c22.style.height = "20vh";
-    c23.style.width = "20vh";
-    c23.style.height = "20vh";
-    c24.style.width = "20vh";
-    c24.style.height = "20vh";
-
-    c31.style.width = "20vh";
-    c31.style.height = "20vh";
-    c32.style.width = "20vh";
-    c32.style.height = "20vh";
-    c33.style.width = "20vh";
-    c33.style.height = "20vh";
-    c34.style.width = "20vh";
-    c34.style.height = "20vh";
-
-    c41.style.width = "20vh";
-    c41.style.height = "20vh";
-    c42.style.width = "20vh";
-    c42.style.height = "20vh";
-    c43.style.width = "20vh";
-    c43.style.height = "20vh";
-    c44.style.width = "20vh";
-    c44.style.height = "20vh";
-
-
-    d11.style.width = "20vh";
-    d11.style.height = "20vh";
-    d12.style.width = "20vh";
-    d12.style.height = "20vh";
-    d13.style.width = "20vh";
-    d13.style.height = "20vh";
-    d14.style.width = "20vh";
-    d14.style.height = "20vh";
-
-    d21.style.width = "20vh";
-    d21.style.height = "20vh";
-    d22.style.width = "20vh";
-    d22.style.height = "20vh";
-    d23.style.width = "20vh";
-    d23.style.height = "20vh";
-    d24.style.width = "20vh";
-    d24.style.height = "20vh";
-
-    d31.style.width = "20vh";
-    d31.style.height = "20vh";
-    d32.style.width = "20vh";
-    d32.style.height = "20vh";
-    d33.style.width = "20vh";
-    d33.style.height = "20vh";
-    d34.style.width = "20vh";
-    d34.style.height = "20vh";
-
-    d41.style.width = "20vh";
-    d41.style.height = "20vh";
-    d42.style.width = "20vh";
-    d42.style.height = "20vh";
-    d43.style.width = "20vh";
-    d43.style.height = "20vh";
-    d44.style.width = "20vh";
-    d44.style.height = "20vh";
-  }
-
-/*
-  function setCellBorders() {
-
-    c11.style.backgroundImage = "url('imgs/c11.png')";
-    c11.style.backgroundSize = "cover";
-    c11.style.backgroundRepeat = "no-repeat";
-    c11.style.backgroundPosition = "center";
-
-    c12.style.backgroundImage = "url('imgs/c12.png')";
-    c12.style.backgroundSize = "cover";
-    c12.style.backgroundRepeat = "no-repeat";
-    c12.style.backgroundPosition = "center";
-
-    c13.style.backgroundImage = "url('imgs/c13.png')";
-    c13.style.backgroundSize = "cover";
-    c13.style.backgroundRepeat = "no-repeat";
-    c13.style.backgroundPosition = "center";
-
-    c14.style.backgroundImage = "url('imgs/c14.png')";
-    c14.style.backgroundSize = "cover";
-    c14.style.backgroundRepeat = "no-repeat";
-    c14.style.backgroundPosition = "center";
-
-    c21.style.backgroundImage = "url('imgs/c21.png')";
-    c21.style.backgroundSize = "cover";
-    c21.style.backgroundRepeat = "no-repeat";
-    c21.style.backgroundPosition = "center";
-
-    c22.style.backgroundImage = "url('imgs/c22.png')";
-    c22.style.backgroundSize = "cover";
-    c22.style.backgroundRepeat = "no-repeat";
-    c22.style.backgroundPosition = "center";
-
-    c23.style.backgroundImage = "url('imgs/c23.png')";
-    c23.style.backgroundSize = "cover";
-    c23.style.backgroundRepeat = "no-repeat";
-    c23.style.backgroundPosition = "center";
-
-    c24.style.backgroundImage = "url('imgs/c24.png')";
-    c24.style.backgroundSize = "cover";
-    c24.style.backgroundRepeat = "no-repeat";
-    c24.style.backgroundPosition = "center";
-
-    c31.style.backgroundImage = "url('imgs/c31.png')";
-    c31.style.backgroundSize = "cover";
-    c31.style.backgroundRepeat = "no-repeat";
-    c31.style.backgroundPosition = "center";
-
-    c32.style.backgroundImage = "url('imgs/c32.png')";
-    c32.style.backgroundSize = "cover";
-    c32.style.backgroundRepeat = "no-repeat";
-    c32.style.backgroundPosition = "center";
-
-    c33.style.backgroundImage = "url('imgs/c33.png')";
-    c33.style.backgroundSize = "cover";
-    c33.style.backgroundRepeat = "no-repeat";
-    c33.style.backgroundPosition = "center";
-
-    c34.style.backgroundImage = "url('imgs/c34.png')";
-    c34.style.backgroundSize = "cover";
-    c34.style.backgroundRepeat = "no-repeat";
-    c34.style.backgroundPosition = "center";
-
-    c41.style.backgroundImage = "url('imgs/c41.png')";
-    c41.style.backgroundSize = "cover";
-    c41.style.backgroundRepeat = "no-repeat";
-    c41.style.backgroundPosition = "center";
-
-    c42.style.backgroundImage = "url('imgs/c42.png')";
-    c42.style.backgroundSize = "cover";
-    c42.style.backgroundRepeat = "no-repeat";
-    c42.style.backgroundPosition = "center";
-
-    c43.style.backgroundImage = "url('imgs/c43.png')";
-    c43.style.backgroundSize = "cover";
-    c43.style.backgroundRepeat = "no-repeat";
-    c43.style.backgroundPosition = "center";
-
-    c44.style.backgroundImage = "url('imgs/c44.png')";
-    c44.style.backgroundSize = "cover";
-    c44.style.backgroundRepeat = "no-repeat";
-    c44.style.backgroundPosition = "center";
-  }*/
-/*
-  function setCellBorders() {
-
-    d11.style.backgroundImage = "url('imgs/c11.png')";
-    d11.style.backgroundSize = "cover";
-    d11.style.backgroundRepeat = "no-repeat";
-    d11.style.backgroundPosition = "center";
-
-    d12.style.backgroundImage = "url('imgs/c12.png')";
-    d12.style.backgroundSize = "cover";
-    d12.style.backgroundRepeat = "no-repeat";
-    d12.style.backgroundPosition = "center";
-
-    d13.style.backgroundImage = "url('imgs/c13.png')";
-    d13.style.backgroundSize = "cover";
-    d13.style.backgroundRepeat = "no-repeat";
-    d13.style.backgroundPosition = "center";
-
-    d14.style.backgroundImage = "url('imgs/c14.png')";
-    d14.style.backgroundSize = "cover";
-    d14.style.backgroundRepeat = "no-repeat";
-    d14.style.backgroundPosition = "center";
-
-    d21.style.backgroundImage = "url('imgs/c21.png')";
-    d21.style.backgroundSize = "cover";
-    d21.style.backgroundRepeat = "no-repeat";
-    d21.style.backgroundPosition = "center";
-
-    d22.style.backgroundImage = "url('imgs/c22.png')";
-    d22.style.backgroundSize = "cover";
-    d22.style.backgroundRepeat = "no-repeat";
-    d22.style.backgroundPosition = "center";
-
-    d23.style.backgroundImage = "url('imgs/c23.png')";
-    d23.style.backgroundSize = "cover";
-    d23.style.backgroundRepeat = "no-repeat";
-    d23.style.backgroundPosition = "center";
-
-    d24.style.backgroundImage = "url('imgs/c24.png')";
-    d24.style.backgroundSize = "cover";
-    d24.style.backgroundRepeat = "no-repeat";
-    d24.style.backgroundPosition = "center";
-
-    d31.style.backgroundImage = "url('imgs/c31.png')";
-    d31.style.backgroundSize = "cover";
-    d31.style.backgroundRepeat = "no-repeat";
-    d31.style.backgroundPosition = "center";
-
-    d32.style.backgroundImage = "url('imgs/c32.png')";
-    d32.style.backgroundSize = "cover";
-    d32.style.backgroundRepeat = "no-repeat";
-    d32.style.backgroundPosition = "center";
-
-    d33.style.backgroundImage = "url('imgs/c33.png')";
-    d33.style.backgroundSize = "cover";
-    d33.style.backgroundRepeat = "no-repeat";
-    d33.style.backgroundPosition = "center";
-
-    d34.style.backgroundImage = "url('imgs/c34.png')";
-    d34.style.backgroundSize = "cover";
-    d34.style.backgroundRepeat = "no-repeat";
-    d34.style.backgroundPosition = "center";
-
-    d41.style.backgroundImage = "url('imgs/c41.png')";
-    d41.style.backgroundSize = "cover";
-    d41.style.backgroundRepeat = "no-repeat";
-    d41.style.backgroundPosition = "center";
-
-    d42.style.backgroundImage = "url('imgs/c42.png')";
-    d42.style.backgroundSize = "cover";
-    d42.style.backgroundRepeat = "no-repeat";
-    d42.style.backgroundPosition = "center";
-
-    d43.style.backgroundImage = "url('imgs/c43.png')";
-    d43.style.backgroundSize = "cover";
-    d43.style.backgroundRepeat = "no-repeat";
-    d43.style.backgroundPosition = "center";
-
-    d44.style.backgroundImage = "url('imgs/c44.png')";
-    d44.style.backgroundSize = "cover";
-    d44.style.backgroundRepeat = "no-repeat";
-    d44.style.backgroundPosition = "center";
-  }*/
 
   function setTickmarkPortrait() {
 
@@ -554,8 +227,6 @@ window.onload=function() {
     tickmark44 = document.createElement("img");
     tickmark44.src = "imgs/tickmark.png";
     
-    //c11.style.textAlign = "right";
-    //.style.verticalAlign = "top";
     d11.appendChild(tickmark11);
     d13.appendChild(tickmark13);
     d23.appendChild(tickmark23);
@@ -564,25 +235,6 @@ window.onload=function() {
     d34.appendChild(tickmark34);
     d42.appendChild(tickmark42);
     d44.appendChild(tickmark44);
-
-    /*
-    c11.style.backgroundColor = "#aaaaaa";
-    c12.style.backgroundColor = "#cccccc";
-    c13.style.backgroundColor = "#aaaaaa";
-    c14.style.backgroundColor = "#cccccc";
-    c21.style.backgroundColor = "#cccccc";
-    c22.style.backgroundColor = "#aaaaaa";
-    c23.style.backgroundColor = "#cccccc";
-    c24.style.backgroundColor = "#aaaaaa";
-    c31.style.backgroundColor = "#aaaaaa";
-    c32.style.backgroundColor = "#cccccc";
-    c33.style.backgroundColor = "#aaaaaa";
-    c34.style.backgroundColor = "#cccccc";
-    c41.style.backgroundColor = "#cccccc";
-    c42.style.backgroundColor = "#aaaaaa";
-    c43.style.backgroundColor = "#cccccc";
-    c44.style.backgroundColor = "#aaaaaa";
-    */
 
     c11.style.backgroundColor = "#26b0f0ff";
     c12.style.backgroundColor = "transparent";
@@ -818,8 +470,6 @@ window.onload=function() {
       // Perform actions specific to portrait mode
       gameLogic();
       displayPortrait();
-      //updateCellSizePortrait();
-      //setCellBorders();
       setTickmarkPortrait();
 
   } else {
@@ -827,8 +477,6 @@ window.onload=function() {
       // Perform actions specific to landscape mode
       gameLogic();
       displayLandscape();
-      //updateCellSizeLandscape();
-      //setCellBorders();
       setTickmarkLandscape();
   }
 
@@ -852,13 +500,9 @@ window.onload=function() {
     
     if (e.matches) {
       displayPortrait();
-      //updateCellSizePortrait();
-      //setCellBorders();
       setTickmarkPortrait();
     } else {
       displayLandscape();
-      //updateCellSizeLandscape();
-      //setCellBorders();
       setTickmarkLandscape();
     } 
     
