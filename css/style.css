@@ -18,26 +18,44 @@
   /**/
   justify-content: center;
   align-items: center;
-
   /**/
 
-  background-color: rgb(139, 197, 30);
+  /*background-color: rgb(34, 231, 245);*/
+  /*background-color: rgb(40, 1, 71);*/
+  /*background-color: rgb(39, 26, 105);*/
+  background-color: rgb(2, 49, 87);
 }
 
 #menubtn {
   width: 70px;
-  height: 50px;
+  height: 70px;
   position: absolute;
   top: 10px;
   left: 10px;
+  
 }
 
+#anchor {
+  text-decoration: none;
+}
+
+/*
 #btn {
   padding: 10px;
+  width: 70px;
+  height: 70px;
 }
 
 #btn a {
-   font-size: 14px;
+  font-size: 14px;
+  width: 70px;
+  height: 70px;
+}*/
+
+#menuimg {
+  width: 70px;
+  height: 70px;
+  border: 0;
 }
 
 #content {
@@ -52,18 +70,23 @@
   /**/
 }
 
-#board {
-  background-color: rgb(255, 224, 45);
+.tbl_1 {
+  /*
+  background-color: rgb(255, 223, 134);*/
+  /*border-collapse: collapse;*/
+  /*background-color: rgb(21, 1, 77);*/
+  background-color: #122542;
+  border-spacing: 0;
   margin: 0;
   padding: 0;
-  /*border: 0;*/
-  border-spacing: 0;
 }
 
-/*table {
+.tbl_2 {
   border-collapse: collapse;
   border-spacing: 0;
-}*/
+  margin: 0;
+  padding: 0;
+}
 
 td/*, th*/ {
   padding: 0;
@@ -75,10 +98,12 @@ tbody, tr {
   /*background-color: transparent;*/
 }
 
-/*
+
 #c11, #c12, #c13, #c14, #c21, #c22, #c23, #c24, #c31, #c32, #c33, #c34, #c41, #c42, #c43, #c44 {
-  transition: width 1.0s ease-in-out, height 1.0s ease-in-out;
-} */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+} 
 
 #d11, #d12, #d13, #d14, #d21, #d22, #d23, #d24, #d31, #d32, #d33, #d34, #d41, #d42, #d43, #d44 {
   text-align: right;

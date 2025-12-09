@@ -3,11 +3,12 @@ window.onload=function() {
   let container = document.getElementById("container");
   let menubtn = document.getElementById("menubtn");
   let content = document.getElementById("content");
-  let board = document.getElementById("board");
   let w = window.innerWidth;
   let h = window.innerHeight;
-  let tbl = document.getElementsByTagName("table");
-  let td = document.getElementsByTagName("td");
+  let tbl_1 = document.getElementsByClassName("tbl_1");
+  let tbl_2 = document.getElementsByClassName("tbl_2");
+  let td_1 = document.getElementsByClassName("td_1");
+  let td_2 = document.getElementsByClassName("td_2");
   let d = document.getElementsByClassName("d");
   let c11 = document.getElementById("c11");
   let c12 = document.getElementById("c12");
@@ -41,6 +42,16 @@ window.onload=function() {
   let d42 = document.getElementById("d42");
   let d43 = document.getElementById("d43");
   let d44 = document.getElementById("d44");
+
+  let Aface1 = "url('imgs/face1.png')";
+  let Aface2 = "url('imgs/face2.png')";
+  let Aface3 = "url('imgs/face3.png')";
+  let Aface4 = "url('imgs/face4.png')";
+  let Bface1 = 'url("imgs/face1.png")';
+  let Bface2 = 'url("imgs/face2.png")';
+  let Bface3 = 'url("imgs/face3.png")';
+  let Bface4 = 'url("imgs/face4.png")';
+
   let padlock11 = "";
   let padlock12 = "";
   let padlock13 = "";
@@ -74,76 +85,56 @@ window.onload=function() {
   let clicks43 = 0;
   let clicks44 = 0;
   let editable = true;
-  let red11 = false;
-  let red12 = false;
-  let red13 = false;
-  let red14 = false;
-  let red21 = false;
-  let red22 = false;
-  let red23 = false;
-  let red24 = false;
-  let red31 = false;
-  let red32 = false;
-  let red33 = false;
-  let red34 = false;
-  let red41 = false;
-  let red42 = false;
-  let red43 = false;
-  let red44 = false;
-  let blue11 = false;
-  let blue12 = false;
-  let blue13 = false;
-  let blue14 = false;
-  let blue21 = false;
-  let blue22 = false;
-  let blue23 = false;
-  let blue24 = false;
-  let blue31 = false;
-  let blue32 = false;
-  let blue33 = false;
-  let blue34 = false;
-  let blue41 = false;
-  let blue42 = false;
-  let blue43 = false;
-  let blue44 = false;
-    
+      
   function displayPortrait() {
 
-    for (let i = 0; i < tbl.length; i++) {
-      tbl[i].style.border = "1vw solid #ffffff";
-      tbl[i].style.width = "86vw";
-      tbl[i].style.height = "86vw";
+    for (let i = 0; i < tbl_1.length; i++) {
+      tbl_1[i].style.border = "1.0vw solid #415a81";
+      //tbl_1[i].style.border = "1.0vw solid #ffffff";
+      
     };
 
-    for (let i = 0; i < td.length; i++) {
-      td[i].style.border = "0.5vw solid #ffffff";
-      td[i].style.width = "20vw";
-      td[i].style.height = "20vw";
+    for (let i = 0; i < td_1.length; i++) {
+      td_1[i].style.border = "0.5vw solid #415a81";
+      //td_1[i].style.border = "0.5vw solid #ffffff";
+    };
+
+    for (let i = 0; i < td_2.length; i++) {
+      td_2[i].style.border = "0.5vw solid #415a81";
+      //td_2[i].style.border = "0.5vw solid #ffffff";
+      td_2[i].style.width = "20vw";
+      td_2[i].style.height = "20vw";
     };
 
     for (let i = 0; i < d.length; i++) {
-      d[i].style.width = "21vw"; // 21vw instead of 20vw is used to avoid unexpected spacing
-      d[i].style.height = "21vw"; // 21vw instead of 20vw is used to avoid unexpected spacing
+      d[i].style.width = "20vw"; 
+      d[i].style.height = "20vw"; 
+      //d[i].style.backgroundColor = "#ff0000"
     };
   }
 
   function displayLandscape() { 
 
-    for (let i = 0; i < tbl.length; i++) {
-      tbl[i].style.border = "1vh solid #ffffff";
-      tbl[i].style.width = "86vh";
-      tbl[i].style.height = "86vh";
+    for (let i = 0; i < tbl_1.length; i++) {
+      tbl_1[i].style.border = "1.0vh solid #415a81";
+      //tbl_1[i].style.width = "86vh";
+      //tbl_1[i].style.height = "86vh";
     };
 
-    for (let i = 0; i < td.length; i++) {
-      td[i].style.border = "0.5vh solid #ffffff";
-      td[i].style.width = "20vh";
-      td[i].style.height = "20vh";
+    for (let i = 0; i < td_1.length; i++) {
+      td_1[i].style.border = "0.5vh solid #415a81";
+    };
+
+    for (let i = 0; i < td_2.length; i++) {
+      td_2[i].style.border = "0.5vh solid #415a81";
+      td_2[i].style.width = "20vh";
+      td_2[i].style.height = "20vh";
     };
 
     for (let i = 0; i < d.length; i++) {
-      d[i].style.width = "21vh"; // 21vw instead of 20vw is used to avoid unexpected spacing
-      d[i].style.height = "21vh"; // 21vw instead of 20vw is used to avoid unexpected spacing
+      d[i].style.width = "20vh"; 
+      d[i].style.height = "20vh"; 
+      //d[i].style.backgroundColor = "#ff0000"
     };
   }
 
@@ -152,26 +143,51 @@ window.onload=function() {
     padlock11.style.width = "5vw";
     padlock11.style.height = "5vw";
 
+    padlock12.style.width = "5vw";
+    padlock12.style.height = "5vw";
+/*
     padlock13.style.width = "5vw";
     padlock13.style.height = "5vw";
 
+    padlock14.style.width = "5vw";
+    padlock14.style.height = "5vw";
+*/
+    padlock21.style.width = "5vw";
+    padlock21.style.height = "5vw";
+/*
+    padlock22.style.width = "5vw";
+    padlock22.style.height = "5vw";
+
     padlock23.style.width = "5vw";
     padlock23.style.height = "5vw";
-
+*/
     padlock24.style.width = "5vw";
     padlock24.style.height = "5vw";
+/*
+    padlock31.style.width = "5vw";
+    padlock31.style.height = "5vw";
 
     padlock32.style.width = "5vw";
     padlock32.style.height = "5vw";
 
+    padlock33.style.width = "5vw";
+    padlock33.style.height = "5vw";
+
     padlock34.style.width = "5vw";
     padlock34.style.height = "5vw";
+*/
+    padlock41.style.width = "5vw";
+    padlock41.style.height = "5vw";
 
     padlock42.style.width = "5vw";
     padlock42.style.height = "5vw";
+/*
+    padlock43.style.width = "5vw";
+    padlock43.style.height = "5vw";
 
     padlock44.style.width = "5vw";
     padlock44.style.height = "5vw";
+*/
   }
 
   function setPadlockLandscape() {
@@ -179,26 +195,407 @@ window.onload=function() {
     padlock11.style.width = "5vh";
     padlock11.style.height = "5vh";
 
+    padlock12.style.width = "5vh";
+    padlock12.style.height = "5vh";
+/*
     padlock13.style.width = "5vh";
     padlock13.style.height = "5vh";
 
+    padlock14.style.width = "5vh";
+    padlock14.style.height = "5vh";
+*/
+    padlock21.style.width = "5vh";
+    padlock21.style.height = "5vh";
+/*
+    padlock22.style.width = "5vh";
+    padlock22.style.height = "5vh";
+
     padlock23.style.width = "5vh";
     padlock23.style.height = "5vh";
-
+*/
     padlock24.style.width = "5vh";
     padlock24.style.height = "5vh";
+/*
+    padlock31.style.width = "5vh";
+    padlock31.style.height = "5vh";
 
     padlock32.style.width = "5vh";
     padlock32.style.height = "5vh";
 
+    padlock33.style.width = "5vh";
+    padlock33.style.height = "5vh";
+
     padlock34.style.width = "5vh";
     padlock34.style.height = "5vh";
+*/
+    padlock41.style.width = "5vh";
+    padlock41.style.height = "5vh";
 
     padlock42.style.width = "5vh";
     padlock42.style.height = "5vh";
+/*
+    padlock43.style.width = "5vh";
+    padlock43.style.height = "5vh";
 
     padlock44.style.width = "5vh";
     padlock44.style.height = "5vh";
+  */
+  }
+
+  function cycleThrough11() {
+    if (c11.style.backgroundImage == "none" || c11.style.backgroundImage == 'none') {
+        c11.style.backgroundImage = Aface1;
+    
+    } else if (c11.style.backgroundImage == Aface1 || c11.style.backgroundImage == Bface1) {
+        c11.style.backgroundImage = Aface2;
+    
+    }  else if (c11.style.backgroundImage == Aface2 || c11.style.backgroundImage == Bface2) {
+        c11.style.backgroundImage = Aface3;
+        
+    } else if (c11.style.backgroundImage == Aface3 || c11.style.backgroundImage == Bface3) {
+        c11.style.backgroundImage = Aface4;
+        
+    } else if (c11.style.backgroundImage == Aface4 || c11.style.backgroundImage == Bface4) {
+        c11.style.backgroundImage = Aface1;
+        
+    } else {
+        null;
+    }
+  }
+
+  function cycleThrough12() {
+    if (c12.style.backgroundImage == "none" || c12.style.backgroundImage == 'none') {
+        c12.style.backgroundImage = Aface1;
+    
+    } else if (c12.style.backgroundImage == Aface1 || c12.style.backgroundImage == Bface1) {
+        c12.style.backgroundImage = Aface2;
+    
+    }  else if (c12.style.backgroundImage == Aface2 || c12.style.backgroundImage == Bface2) {
+        c12.style.backgroundImage = Aface3;
+        
+    } else if (c12.style.backgroundImage == Aface3 || c12.style.backgroundImage == Bface3) {
+        c12.style.backgroundImage = Aface4;
+        
+    } else if (c12.style.backgroundImage == Aface4 || c12.style.backgroundImage == Bface4) {
+        c12.style.backgroundImage = Aface1;
+        
+    } else {
+        null;
+    }
+  }
+
+  function cycleThrough13() {
+    if (c13.style.backgroundImage == "none" || c13.style.backgroundImage == 'none') {
+        c13.style.backgroundImage = Aface1;
+    
+    } else if (c13.style.backgroundImage == Aface1 || c13.style.backgroundImage == Bface1) {
+        c13.style.backgroundImage = Aface2;
+    
+    }  else if (c13.style.backgroundImage == Aface2 || c13.style.backgroundImage == Bface2) {
+        c13.style.backgroundImage = Aface3;
+        
+    } else if (c13.style.backgroundImage == Aface3 || c13.style.backgroundImage == Bface3) {
+        c13.style.backgroundImage = Aface4;
+        
+    } else if (c13.style.backgroundImage == Aface4 || c13.style.backgroundImage == Bface4) {
+        c13.style.backgroundImage = Aface1;
+        
+    } else {
+        null;
+    }
+  }
+
+  function cycleThrough14() {
+    if (c14.style.backgroundImage == "none" || c14.style.backgroundImage == 'none') {
+        c14.style.backgroundImage = Aface1;
+    
+    } else if (c14.style.backgroundImage == Aface1 || c14.style.backgroundImage == Bface1) {
+        c14.style.backgroundImage = Aface2;
+    
+    }  else if (c14.style.backgroundImage == Aface2 || c14.style.backgroundImage == Bface2) {
+        c14.style.backgroundImage = Aface3;
+        
+    } else if (c14.style.backgroundImage == Aface3 || c14.style.backgroundImage == Bface3) {
+        c14.style.backgroundImage = Aface4;
+        
+    } else if (c14.style.backgroundImage == Aface4 || c14.style.backgroundImage == Bface4) {
+        c14.style.backgroundImage = Aface1;
+        
+    } else {
+        null;
+    }
+  }
+
+  function cycleThrough21() {
+    if (c21.style.backgroundImage == "none" || c21.style.backgroundImage == 'none') {
+        c21.style.backgroundImage = Aface1;
+    
+    } else if (c21.style.backgroundImage == Aface1 || c21.style.backgroundImage == Bface1) {
+        c21.style.backgroundImage = Aface2;
+    
+    }  else if (c21.style.backgroundImage == Aface2 || c21.style.backgroundImage == Bface2) {
+        c21.style.backgroundImage = Aface3;
+        
+    } else if (c21.style.backgroundImage == Aface3 || c21.style.backgroundImage == Bface3) {
+        c21.style.backgroundImage = Aface4;
+        
+    } else if (c21.style.backgroundImage == Aface4 || c21.style.backgroundImage == Bface4) {
+        c21.style.backgroundImage = Aface1;
+        
+    } else {
+        null;
+    }
+  }
+
+  function cycleThrough22() {
+    if (c22.style.backgroundImage == "none" || c22.style.backgroundImage == 'none') {
+        c22.style.backgroundImage = Aface1;
+    
+    } else if (c22.style.backgroundImage == Aface1 || c22.style.backgroundImage == Bface1) {
+        c22.style.backgroundImage = Aface2;
+    
+    }  else if (c22.style.backgroundImage == Aface2 || c22.style.backgroundImage == Bface2) {
+        c22.style.backgroundImage = Aface3;
+        
+    } else if (c22.style.backgroundImage == Aface3 || c22.style.backgroundImage == Bface3) {
+        c22.style.backgroundImage = Aface4;
+        
+    } else if (c22.style.backgroundImage == Aface4 || c22.style.backgroundImage == Bface4) {
+        c22.style.backgroundImage = Aface1;
+        
+    } else {
+        null;
+    }
+  }
+
+  function cycleThrough23() {
+    if (c23.style.backgroundImage == "none" || c23.style.backgroundImage == 'none') {
+        c23.style.backgroundImage = Aface1;
+    
+    } else if (c23.style.backgroundImage == Aface1 || c23.style.backgroundImage == Bface1) {
+        c23.style.backgroundImage = Aface2;
+    
+    }  else if (c23.style.backgroundImage == Aface2 || c23.style.backgroundImage == Bface2) {
+        c23.style.backgroundImage = Aface3;
+        
+    } else if (c23.style.backgroundImage == Aface3 || c23.style.backgroundImage == Bface3) {
+        c23.style.backgroundImage = Aface4;
+        
+    } else if (c23.style.backgroundImage == Aface4 || c23.style.backgroundImage == Bface4) {
+        c23.style.backgroundImage = Aface1;
+        
+    } else {
+        null;
+    }
+  }
+
+  function cycleThrough24() {
+    if (c24.style.backgroundImage == "none" || c24.style.backgroundImage == 'none') {
+        c24.style.backgroundImage = Aface1;
+    
+    } else if (c24.style.backgroundImage == Aface1 || c24.style.backgroundImage == Bface1) {
+        c24.style.backgroundImage = Aface2;
+    
+    }  else if (c24.style.backgroundImage == Aface2 || c24.style.backgroundImage == Bface2) {
+        c24.style.backgroundImage = Aface3;
+        
+    } else if (c24.style.backgroundImage == Aface3 || c24.style.backgroundImage == Bface3) {
+        c24.style.backgroundImage = Aface4;
+        
+    } else if (c24.style.backgroundImage == Aface4 || c24.style.backgroundImage == Bface4) {
+        c24.style.backgroundImage = Aface1;
+        
+    } else {
+        null;
+    }
+  }
+
+  function cycleThrough31() {
+    if (c31.style.backgroundImage == "none" || c31.style.backgroundImage == 'none') {
+        c31.style.backgroundImage = Aface1;
+    
+    } else if (c31.style.backgroundImage == Aface1 || c31.style.backgroundImage == Bface1) {
+        c31.style.backgroundImage = Aface2;
+    
+    }  else if (c31.style.backgroundImage == Aface2 || c31.style.backgroundImage == Bface2) {
+        c31.style.backgroundImage = Aface3;
+        
+    } else if (c31.style.backgroundImage == Aface3 || c31.style.backgroundImage == Bface3) {
+        c31.style.backgroundImage = Aface4;
+        
+    } else if (c31.style.backgroundImage == Aface4 || c31.style.backgroundImage == Bface4) {
+        c31.style.backgroundImage = Aface1;
+        
+    } else {
+        null;
+    }
+  }
+
+  function cycleThrough32() {
+    if (c32.style.backgroundImage == "none" || c32.style.backgroundImage == 'none') {
+        c32.style.backgroundImage = Aface1;
+    
+    } else if (c32.style.backgroundImage == Aface1 || c32.style.backgroundImage == Bface1) {
+        c32.style.backgroundImage = Aface2;
+    
+    }  else if (c32.style.backgroundImage == Aface2 || c32.style.backgroundImage == Bface2) {
+        c32.style.backgroundImage = Aface3;
+        
+    } else if (c32.style.backgroundImage == Aface3 || c32.style.backgroundImage == Bface3) {
+        c32.style.backgroundImage = Aface4;
+        
+    } else if (c32.style.backgroundImage == Aface4 || c32.style.backgroundImage == Bface4) {
+        c32.style.backgroundImage = Aface1;
+        
+    } else {
+        null;
+    }
+  }
+
+  function cycleThrough33() {
+    if (c33.style.backgroundImage == "none" || c33.style.backgroundImage == 'none') {
+        c33.style.backgroundImage = Aface1;
+    
+    } else if (c33.style.backgroundImage == Aface1 || c33.style.backgroundImage == Bface1) {
+        c33.style.backgroundImage = Aface2;
+    
+    }  else if (c33.style.backgroundImage == Aface2 || c33.style.backgroundImage == Bface2) {
+        c33.style.backgroundImage = Aface3;
+        
+    } else if (c33.style.backgroundImage == Aface3 || c33.style.backgroundImage == Bface3) {
+        c33.style.backgroundImage = Aface4;
+        
+    } else if (c33.style.backgroundImage == Aface4 || c33.style.backgroundImage == Bface4) {
+        c33.style.backgroundImage = Aface1;
+        
+    } else {
+        null;
+    }
+  }
+
+  function cycleThrough34() {
+    if (c34.style.backgroundImage == "none" || c34.style.backgroundImage == 'none') {
+        c34.style.backgroundImage = Aface1;
+    
+    } else if (c34.style.backgroundImage == Aface1 || c34.style.backgroundImage == Bface1) {
+        c34.style.backgroundImage = Aface2;
+    
+    }  else if (c34.style.backgroundImage == Aface2 || c34.style.backgroundImage == Bface2) {
+        c34.style.backgroundImage = Aface3;
+        
+    } else if (c34.style.backgroundImage == Aface3 || c34.style.backgroundImage == Bface3) {
+        c34.style.backgroundImage = Aface4;
+        
+    } else if (c34.style.backgroundImage == Aface4 || c34.style.backgroundImage == Bface4) {
+        c34.style.backgroundImage = Aface1;
+        
+    } else {
+        null;
+    }
+  }
+
+  function cycleThrough41() {
+    if (c41.style.backgroundImage == "none" || c41.style.backgroundImage == 'none') {
+        c41.style.backgroundImage = Aface1;
+    
+    } else if (c41.style.backgroundImage == Aface1 || c41.style.backgroundImage == Bface1) {
+        c41.style.backgroundImage = Aface2;
+    
+    }  else if (c41.style.backgroundImage == Aface2 || c41.style.backgroundImage == Bface2) {
+        c41.style.backgroundImage = Aface3;
+        
+    } else if (c41.style.backgroundImage == Aface3 || c41.style.backgroundImage == Bface3) {
+        c41.style.backgroundImage = Aface4;
+        
+    } else if (c41.style.backgroundImage == Aface4 || c41.style.backgroundImage == Bface4) {
+        c41.style.backgroundImage = Aface1;
+        
+    } else {
+        null;
+    }
+  }
+
+  function cycleThrough42() {
+    if (c42.style.backgroundImage == "none" || c42.style.backgroundImage == 'none') {
+        c42.style.backgroundImage = Aface1;
+    
+    } else if (c42.style.backgroundImage == Aface1 || c42.style.backgroundImage == Bface1) {
+        c42.style.backgroundImage = Aface2;
+    
+    }  else if (c42.style.backgroundImage == Aface2 || c42.style.backgroundImage == Bface2) {
+        c42.style.backgroundImage = Aface3;
+        
+    } else if (c42.style.backgroundImage == Aface3 || c42.style.backgroundImage == Bface3) {
+        c42.style.backgroundImage = Aface4;
+        
+    } else if (c42.style.backgroundImage == Aface4 || c42.style.backgroundImage == Bface4) {
+        c42.style.backgroundImage = Aface1;
+        
+    } else {
+        null;
+    }
+  }
+
+  function cycleThrough43() {
+    if (c43.style.backgroundImage == "none" || c43.style.backgroundImage == 'none') {
+        c43.style.backgroundImage = Aface1;
+    
+    } else if (c43.style.backgroundImage == Aface1 || c43.style.backgroundImage == Bface1) {
+        c43.style.backgroundImage = Aface2;
+    
+    }  else if (c43.style.backgroundImage == Aface2 || c43.style.backgroundImage == Bface2) {
+        c43.style.backgroundImage = Aface3;
+        
+    } else if (c43.style.backgroundImage == Aface3 || c43.style.backgroundImage == Bface3) {
+        c43.style.backgroundImage = Aface4;
+        
+    } else if (c43.style.backgroundImage == Aface4 || c43.style.backgroundImage == Bface4) {
+        c43.style.backgroundImage = Aface1;
+        
+    } else {
+        null;
+    }
+  }
+
+  function cycleThrough44() {
+    if (c44.style.backgroundImage == "none" || c44.style.backgroundImage == 'none') {
+        c44.style.backgroundImage = Aface1;
+    
+    } else if (c44.style.backgroundImage == Aface1 || c44.style.backgroundImage == Bface1) {
+        c44.style.backgroundImage = Aface2;
+    
+    }  else if (c44.style.backgroundImage == Aface2 || c44.style.backgroundImage == Bface2) {
+        c44.style.backgroundImage = Aface3;
+        
+    } else if (c44.style.backgroundImage == Aface3 || c44.style.backgroundImage == Bface3) {
+        c44.style.backgroundImage = Aface4;
+        
+    } else if (c44.style.backgroundImage == Aface4 || c44.style.backgroundImage == Bface4) {
+        c44.style.backgroundImage = Aface1;
+        
+    } else {
+        null;
+    }
+  }
+
+  function checkWin() {
+
+    if ((c13.style.backgroundImage == Aface4 || c13.style.backgroundImage == Bface4) && 
+      (c14.style.backgroundImage == Aface1 || c14.style.backgroundImage == Bface1) && 
+      (c22.style.backgroundImage == Aface1 || c22.style.backgroundImage == Bface1) && 
+      (c23.style.backgroundImage == Aface3 || c23.style.backgroundImage == Bface3) && 
+      (c31.style.backgroundImage == Aface1 || c31.style.backgroundImage == Bface1) && 
+      (c32.style.backgroundImage == Aface3 || c32.style.backgroundImage == Bface3) && 
+      (c33.style.backgroundImage == Aface2 || c33.style.backgroundImage == Bface2) && 
+      (c34.style.backgroundImage == Aface4 || c34.style.backgroundImage == Bface4) && 
+      (c43.style.backgroundImage == Aface1 || c43.style.backgroundImage == Bface1) && 
+      (c44.style.backgroundImage == Aface3 || c44.style.backgroundImage == Bface3))  { {
+        editable = false;
+        setTimeout(function() {
+          alert("You Win!");
+        }, 100);
+      }
+    }
   }
 
   function gameLogic() {
@@ -206,262 +603,137 @@ window.onload=function() {
     padlock11 = document.createElement("img");
     padlock11.src = "imgs/padlock.png";
 
-    padlock13 = document.createElement("img");
-    padlock13.src = "imgs/padlock.png";
+    padlock12 = document.createElement("img");
+    padlock12.src = "imgs/padlock.png";
 
-    padlock23 = document.createElement("img");
-    padlock23.src = "imgs/padlock.png";
+    padlock21 = document.createElement("img");
+    padlock21.src = "imgs/padlock.png";
  
     padlock24 = document.createElement("img");
     padlock24.src = "imgs/padlock.png";
 
-    padlock32 = document.createElement("img");
-    padlock32.src = "imgs/padlock.png";
+    padlock41 = document.createElement("img");
+    padlock41.src = "imgs/padlock.png";
 
-    padlock34 = document.createElement("img");
-    padlock34.src = "imgs/padlock.png";
-   
     padlock42 = document.createElement("img");
     padlock42.src = "imgs/padlock.png";
-
-    padlock44 = document.createElement("img");
-    padlock44.src = "imgs/padlock.png";
     
     d11.appendChild(padlock11);
-    d13.appendChild(padlock13);
-    d23.appendChild(padlock23);
+    d12.appendChild(padlock12);
+    d21.appendChild(padlock21);
     d24.appendChild(padlock24);
-    d32.appendChild(padlock32);
-    d34.appendChild(padlock34);
+    d41.appendChild(padlock41);
     d42.appendChild(padlock42);
-    d44.appendChild(padlock44);
+     
+    c11.style.backgroundImage = Aface3;
+    c12.style.backgroundImage = Aface2;
+    c13.style.backgroundImage = "none"; 
+    c14.style.backgroundImage = "none"; 
+    c21.style.backgroundImage = Aface4;
+    c22.style.backgroundImage = "none"; 
+    c23.style.backgroundImage = "none"; 
+    c24.style.backgroundImage = Aface2;
+    c31.style.backgroundImage = "none"; 
+    c32.style.backgroundImage = "none"; 
+    c33.style.backgroundImage = "none"; 
+    c34.style.backgroundImage = "none"; 
+    c41.style.backgroundImage = Aface2;
+    c42.style.backgroundImage = Aface4;
+    c43.style.backgroundImage = "none"; 
+    c44.style.backgroundImage = "none"; 
 
-    c11.style.backgroundColor = "#26b0f0ff";
-    c12.style.backgroundColor = "transparent";
-    c13.style.backgroundColor = "#f02626ff";
-    c14.style.backgroundColor = "transparent";
-    c21.style.backgroundColor = "transparent";
-    c22.style.backgroundColor = "transparent";
-    c23.style.backgroundColor = "#26b0f0ff";
-    c24.style.backgroundColor = "#f02626ff";
-    c31.style.backgroundColor = "transparent";
-    c32.style.backgroundColor = "#26b0f0ff";
-    c33.style.backgroundColor = "transparent";
-    c34.style.backgroundColor = "#f02626ff";
-    c41.style.backgroundColor = "transparent";
-    c42.style.backgroundColor = "#f02626ff";
-    c43.style.backgroundColor = "transparent";
-    c44.style.backgroundColor = "#26b0f0ff";
-
-    function checkWin() {
-      if ((red12 == true) && 
-        (blue14 == true) && 
-        (red21 == true) && 
-        (blue22 == true) && 
-        (blue31 == true) && 
-        (red33 == true) && 
-        (red41 == true) && 
-        (blue43 == true)) {
-          editable = false;
-          setTimeout(function() {
-            alert("You Win!");
-          }, 200);
-      }
-    }
-
-    d12.addEventListener("click", function(e) {
+    d13.addEventListener("click", function(e) {
       setTimeout(function() {
-       if (editable) {
-          
-          if (clicks12 == 1) {
-              c12.style.backgroundColor = "#f02626ff";
-              red12 = true;
-              blue12 = false;
-          } else if (clicks12 == 0) {
-              c12.style.backgroundColor = "#26b0f0ff";
-              red12 = false;
-              blue12 = true;
-          } else {
-              null;
-          }
-          clicks12 = clicks12 + 1;
-          if (clicks12 >= 2) {
-            clicks12 = 0;
-          }
+        if (editable) {
+          cycleThrough13();
           checkWin();
-        }
-      }, 200);
+        }     
+      }, 100);
     });
 
     d14.addEventListener("click", function(e) {
       setTimeout(function() {
-       if (editable) {
-          
-          if (clicks14 == 1) {
-              c14.style.backgroundColor = "#f02626ff";
-              red14 = true;
-              blue14 = false;
-          } else if (clicks14 == 0) {
-              c14.style.backgroundColor = "#26b0f0ff";
-              red14 = false;
-              blue14 = true;
-          } else {
-              null;
-          }
-          clicks14 = clicks14 + 1;
-          if (clicks14 >= 2) {
-            clicks14 = 0;
-          }
+        if (editable) {
+          cycleThrough14();
           checkWin();
-        }
-      }, 200);
-    });
-
-    d21.addEventListener("click", function(e) {
-      setTimeout(function() {
-       if (editable) {
-          
-          if (clicks21 == 1) {
-              c21.style.backgroundColor = "#f02626ff";
-              red21 = true;
-              blue21 = false;
-          } else if (clicks21 == 0) {
-              c21.style.backgroundColor = "#26b0f0ff";
-              red21 = false;
-              blue21 = true;
-          } else {
-              null;
-          }
-          clicks21 = clicks21 + 1;
-          if (clicks21 >= 2) {
-            clicks21 = 0;
-          }
-          checkWin();
-        }
-      }, 200);
+        }     
+      }, 100);
     });
 
     d22.addEventListener("click", function(e) {
       setTimeout(function() {
-       if (editable) {
-          
-          if (clicks22 == 1) {
-              c22.style.backgroundColor = "#f02626ff";
-              red22 = true;
-              blue22 = false;
-          } else if (clicks22 == 0) {
-              c22.style.backgroundColor = "#26b0f0ff";
-              red22 = false;
-              blue22 = true;
-          } else {
-              null;
-          }
-          clicks22 = clicks22 + 1;
-          if (clicks22 >= 2) {
-            clicks22 = 0;
-          }
+        if (editable) {
+          cycleThrough22();
           checkWin();
-        }
-      }, 200);
+        }     
+      }, 100);
+    });
+
+    d23.addEventListener("click", function(e) {
+      setTimeout(function() {
+        if (editable) {
+          cycleThrough23();
+          checkWin();
+        }     
+      }, 100);
     });
 
     d31.addEventListener("click", function(e) {
       setTimeout(function() {
-       if (editable) {
-          
-          if (clicks31 == 1) {
-              c31.style.backgroundColor = "#f02626ff";
-              red31 = true;
-              blue31 = false;
-          } else if (clicks31 == 0) {
-              c31.style.backgroundColor = "#26b0f0ff";
-              red31 = false;
-              blue31 = true;
-          } else {
-              null;
-          }
-          clicks31 = clicks31 + 1;
-          if (clicks31 >= 2) {
-            clicks31 = 0;
-          }
+        if (editable) {
+          cycleThrough31();
           checkWin();
-        }
-      }, 200);
+        }     
+      }, 100);
+    });
+
+    d32.addEventListener("click", function(e) {
+      setTimeout(function() {
+        if (editable) {
+          cycleThrough32();
+          checkWin();
+        }     
+      }, 100);
     });
 
     d33.addEventListener("click", function(e) {
       setTimeout(function() {
-       if (editable) {
-          
-          if (clicks33 == 1) {
-              c33.style.backgroundColor = "#f02626ff";
-              red33 = true;
-              blue33 = false;
-          } else if (clicks33 == 0) {
-              c33.style.backgroundColor = "#26b0f0ff";
-              red33 = false;
-              blue33 = true;
-          } else {
-              null;
-          }
-          clicks33 = clicks33 + 1;
-          if (clicks33 >= 2) {
-            clicks33 = 0;
-          }
+        if (editable) {
+          cycleThrough33();
           checkWin();
-        }
-      }, 200);
+        }     
+      }, 100);
     });
 
-    d41.addEventListener("click", function(e) {
+    d34.addEventListener("click", function(e) {
       setTimeout(function() {
-       if (editable) {
-          
-          if (clicks41 == 1) {
-              c41.style.backgroundColor = "#f02626ff";
-              red41 = true;
-              blue41 = false;
-          } else if (clicks41 == 0) {
-              c41.style.backgroundColor = "#26b0f0ff";
-              red41 = false;
-              blue41 = true;
-          } else {
-              null;
-          }
-          clicks41 = clicks41 + 1;
-          if (clicks41 >= 2) {
-            clicks41 = 0;
-          }
+        if (editable) {
+          cycleThrough34();
           checkWin();
-        }
-      }, 200);
+        }     
+      }, 100);
     });
 
     d43.addEventListener("click", function(e) {
       setTimeout(function() {
-       if (editable) {
-          
-          if (clicks43 == 1) {
-              c43.style.backgroundColor = "#f02626ff";
-              red43 = true;
-              blue43 = false;
-          } else if (clicks43 == 0) {
-              c43.style.backgroundColor = "#26b0f0ff";
-              red43 = false;
-              blue43 = true;
-          } else {
-              null;
-          }
-          clicks43 = clicks43 + 1;
-          if (clicks43 >= 2) {
-            clicks43 = 0;
-          }
+        if (editable) {
+          cycleThrough43();
           checkWin();
-        }
-      }, 200);
+        }     
+      }, 100);
     });
-  }
 
+    d44.addEventListener("click", function(e) {
+      setTimeout(function() {
+        if (editable) {
+          cycleThrough44();
+          checkWin();
+        }     
+      }, 100);
+    });
+
+  }
+  
   // Check for portrait orientation
   const isPortrait = window.matchMedia("(orientation: portrait)").matches;
 
